@@ -1,0 +1,8 @@
+{
+  "hooks": {
+    "pre-tool": {
+      "Task": "./scripts/track-agent-usage.sh",
+      "Skill": "./scripts/track-agent-usage.sh"
+    }
+  }
+}

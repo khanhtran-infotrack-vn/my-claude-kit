@@ -223,6 +223,75 @@ const db = new PostgreSQLDatabase();
 const userService = new UserService(db);
 ```
 
+### .NET/C# SOLID Implementation
+
+**.NET Clean Architecture Example:**
+```csharp
+// Domain Layer - Entities and Interfaces
+public sealed class User
+{
+    public Guid Id { get; private set; }
+    public string Email { get; private set; }
+    public string Name { get; private set; }
+
+    private User() { } // EF Core
+
+    public static User Create(string email, string name)
+    {
+        return new User { Id = Guid.NewGuid(), Email = email, Name = name };
+    }
+}
+
+// Application Layer - Use Cases with MediatR
+public sealed record CreateUserCommand(string Email, string Name) : IRequest<Result<UserDto>>;
+
+public sealed class CreateUserHandler : IRequestHandler<CreateUserCommand, Result<UserDto>>
+{
+    private readonly IUserRepository _repository;
+    private readonly IEmailService _emailService;
+
+    public CreateUserHandler(IUserRepository repository, IEmailService emailService)
+    {
+        _repository = repository;
+        _emailService = emailService;
+    }
+
+    public async Task<Result<UserDto>> Handle(CreateUserCommand request, CancellationToken ct)
+    {
+        if (await _repository.EmailExistsAsync(request.Email, ct))
+            return Result.Failure<UserDto>("Email already exists");
+
+        var user = User.Create(request.Email, request.Name);
+        await _repository.AddAsync(user, ct);
+        await _emailService.SendWelcomeEmailAsync(user.Email, ct);
+
+        return Result.Success(new UserDto(user.Id, user.Email, user.Name));
+    }
+}
+
+// Infrastructure Layer - Repository Implementation
+public sealed class UserRepository : IUserRepository
+{
+    private readonly AppDbContext _context;
+
+    public UserRepository(AppDbContext context) => _context = context;
+
+    public async Task<bool> EmailExistsAsync(string email, CancellationToken ct)
+        => await _context.Users.AnyAsync(u => u.Email == email, ct);
+
+    public async Task AddAsync(User user, CancellationToken ct)
+    {
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync(ct);
+    }
+}
+
+// DI Registration (Program.cs)
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IEmailService, SmtpEmailService>();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserHandler).Assembly));
+```
+
 ## Design Patterns
 
 ### Repository Pattern

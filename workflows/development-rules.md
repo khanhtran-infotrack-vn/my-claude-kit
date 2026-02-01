@@ -1,7 +1,16 @@
 # Development Rules
 
 **IMPORTANT:** Analyze the skills catalog and activate the skills that are needed for the task during the process.
-**IMPORTANT:** You ALWAYS follow these principles: **YANGI (You Aren't Gonna Need It) - KISS (Keep It Simple, Stupid) - DRY (Don't Repeat Yourself)**
+**IMPORTANT:** You ALWAYS follow these principles:
+- **YAGNI** (You Aren't Gonna Need It) - Don't build features until they're needed
+- **KISS** (Keep It Simple, Stupid) - Prefer simple solutions over complex ones
+- **DRY** (Don't Repeat Yourself) - Eliminate code duplication
+- **SOLID** (especially for .NET/C# projects):
+  - **S**ingle Responsibility - One class, one purpose
+  - **O**pen/Closed - Open for extension, closed for modification
+  - **L**iskov Substitution - Subtypes must be substitutable for base types
+  - **I**nterface Segregation - Many specific interfaces over one general
+  - **D**ependency Inversion - Depend on abstractions, not concretions
 
 ## General
 - **File Naming**: Use kebab-case for file names with a meaningful name that describes the purpose of the file, doesn't matter if the file name is long, just make sure when LLMs read the file names while using Grep or other tools, they can understand the purpose of the file right away without reading the file content.
@@ -13,6 +22,9 @@
 - Use `docs-seeker` skill for exploring latest docs of plugins/packages if needed
 - Use `gh` bash command to interact with Github features if needed
 - Use `psql` bash command to query Postgres database for debugging if needed
+- Use `sqlcmd` or Azure Data Studio for SQL Server database debugging if needed
+- For .NET projects: Use `dotnet ef` for Entity Framework Core migrations and database operations
+- For .NET projects: Use `dotnet build`, `dotnet test`, `dotnet run` for development workflow
 - Use `ai-multimodal` skill for describing details of images, videos, documents, etc. if needed
 - Use `ai-multimodal` skill and `imagemagick` skill for generating and editing images, videos, documents, etc. if needed
 - Use `sequential-thinking` skill and `debugging` skills for sequential thinking, analyzing code, debugging, etc. if needed
@@ -30,8 +42,9 @@
 ## Pre-commit/Push Rules
 - Run linting before commit
 - Run tests before push (DO NOT ignore failed tests just to pass the build or github actions)
+- For .NET projects: Run `dotnet build` and `dotnet test` before commit
 - Keep commits focused on the actual code changes
-- **DO NOT** commit and push any confidential information (such as dotenv files, API keys, database credentials, etc.) to git repository!
+- **DO NOT** commit and push any confidential information (such as dotenv files, appsettings.*.json with secrets, API keys, database credentials, etc.) to git repository!
 - Create clean, professional commit messages without AI references. Use conventional commit format.
 
 ## Code Implementation

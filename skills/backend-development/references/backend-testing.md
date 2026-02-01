@@ -35,6 +35,14 @@ Comprehensive testing approaches, frameworks, and quality assurance practices (2
 - **testing** - Built-in, table-driven tests
 - **testify** - Assertions and mocking
 
+**C#/.NET:**
+- **xUnit** - Modern, extensible, preferred for ASP.NET Core
+- **NUnit** - Feature-rich, mature framework
+- **MSTest** - Microsoft's built-in framework
+- **FluentAssertions** - Readable assertion syntax
+- **Moq** - Leading mocking library for .NET
+- **NSubstitute** - Alternative mocking with cleaner syntax
+
 ### Best Practices
 
 ```typescript
@@ -81,6 +89,56 @@ it('should send welcome email after user creation', async () => {
 
   expect(emailService.sendWelcomeEmail).toHaveBeenCalledWith('test@example.com');
 });
+```
+
+### .NET Unit Testing (xUnit)
+
+```csharp
+public class UserServiceTests
+{
+    private readonly Mock<IUserRepository> _userRepositoryMock;
+    private readonly Mock<IEmailService> _emailServiceMock;
+    private readonly UserService _sut;
+
+    public UserServiceTests()
+    {
+        _userRepositoryMock = new Mock<IUserRepository>();
+        _emailServiceMock = new Mock<IEmailService>();
+        _sut = new UserService(_userRepositoryMock.Object, _emailServiceMock.Object);
+    }
+
+    [Fact]
+    public async Task CreateUser_WithValidData_ReturnsUser()
+    {
+        // Arrange
+        var request = new CreateUserRequest("test@example.com", "Test User");
+        _userRepositoryMock.Setup(x => x.EmailExistsAsync(request.Email))
+            .ReturnsAsync(false);
+
+        // Act
+        var result = await _sut.CreateUserAsync(request);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        result.Value.Email.Should().Be(request.Email);
+    }
+
+    [Fact]
+    public async Task CreateUser_WithDuplicateEmail_ReturnsError()
+    {
+        // Arrange
+        var request = new CreateUserRequest("existing@example.com", "Test");
+        _userRepositoryMock.Setup(x => x.EmailExistsAsync(request.Email))
+            .ReturnsAsync(true);
+
+        // Act
+        var result = await _sut.CreateUserAsync(request);
+
+        // Assert
+        result.IsSuccess.Should().BeFalse();
+        result.Error.Should().Be("Email already exists");
+    }
+}
 ```
 
 ## Integration Testing
@@ -159,6 +217,46 @@ beforeAll(async () => {
 afterAll(async () => {
   await container.stop();
 });
+```
+
+### .NET Integration Testing (WebApplicationFactory)
+
+```csharp
+public class UsersApiTests : IClassFixture<WebApplicationFactory<Program>>
+{
+    private readonly HttpClient _client;
+    private readonly WebApplicationFactory<Program> _factory;
+
+    public UsersApiTests(WebApplicationFactory<Program> factory)
+    {
+        _factory = factory.WithWebHostBuilder(builder =>
+        {
+            builder.ConfigureServices(services =>
+            {
+                // Replace with test database
+                services.RemoveAll<DbContext>();
+                services.AddDbContext<AppDbContext>(options =>
+                    options.UseInMemoryDatabase("TestDb"));
+            });
+        });
+        _client = _factory.CreateClient();
+    }
+
+    [Fact]
+    public async Task CreateUser_ReturnsCreated()
+    {
+        // Arrange
+        var request = new { Email = "test@example.com", Name = "Test User" };
+
+        // Act
+        var response = await _client.PostAsJsonAsync("/api/users", request);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.Created);
+        var user = await response.Content.ReadFromJsonAsync<UserDto>();
+        user!.Email.Should().Be(request.Email);
+    }
+}
 ```
 
 ## Contract Testing (Microservices)
@@ -337,6 +435,9 @@ docker run -t owasp/zap2docker-stable zap-baseline.py \
 # npm audit for Node.js
 npm audit fix
 
+# dotnet for .NET
+dotnet list package --vulnerable
+
 # Snyk for multi-language
 snyk test
 snyk monitor  # Continuous monitoring
@@ -358,6 +459,10 @@ vitest run --coverage
 
 # Jest with coverage
 jest --coverage --coverageThreshold='{"global":{"branches":80,"functions":80,"lines":80}}'
+
+# .NET with coverage (using Coverlet)
+dotnet test --collect:"XPlat Code Coverage"
+dotnet tool run reportgenerator -reports:**/coverage.cobertura.xml -targetdir:coverage
 ```
 
 ## CI/CD Testing Pipeline
@@ -427,3 +532,7 @@ jobs:
 - **k6:** https://k6.io/docs/
 - **Pact:** https://docs.pact.io/
 - **TestContainers:** https://testcontainers.com/
+- **xUnit:** https://xunit.net/
+- **FluentAssertions:** https://fluentassertions.com/
+- **Moq:** https://github.com/moq/moq
+- **ASP.NET Core Integration Testing:** https://learn.microsoft.com/aspnet/core/test/integration-tests

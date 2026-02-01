@@ -12,6 +12,7 @@
 - Handle edge cases and error scenarios
 - **DO NOT** create new enhanced files, update to the existing files directly.
 - **[IMPORTANT]** After creating or modifying code file, run compile command/script to check for any compile errors.
+- For .NET projects: Run `dotnet build` after code changes to verify compilation
 
 #### 2. Testing
 - Delegate to `tester` agent to run tests and analyze the summary report.

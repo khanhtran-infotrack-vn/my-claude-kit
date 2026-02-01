@@ -69,6 +69,34 @@ Core technologies, frameworks, databases, and message queues for modern backend 
 
 **When to Choose:** Maximum performance needed, memory safety critical, low-level control required
 
+### C#/.NET
+**Market Position:** Enterprise standard, .NET 8/9 performance rivals Go/Rust
+
+**Best For:**
+- Enterprise applications
+- Azure cloud-native development
+- Windows ecosystem integration
+- Microservices with high performance
+
+**Popular Frameworks:**
+- **ASP.NET Core** - High-performance web framework, cross-platform
+- **Minimal APIs** - Lightweight, fast startup, serverless-friendly
+- **gRPC** - High-performance RPC, native .NET support
+- **SignalR** - Real-time web functionality (WebSockets abstraction)
+
+**Key Tools:**
+- **Entity Framework Core** - ORM with LINQ, migrations, type-safe queries
+- **MediatR** - CQRS/Mediator pattern implementation
+- **FluentValidation** - Strongly-typed validation rules
+- **Serilog** - Structured logging with sinks for various outputs
+
+**Architecture Patterns:**
+- **Clean Architecture** - Domain/Application/Infrastructure/Web separation
+- **CQRS** - Command Query Responsibility Segregation
+- **Result Pattern** - Explicit success/failure handling (no exceptions for flow control)
+
+**When to Choose:** Enterprise environment, Azure deployment, team .NET expertise, need for strong tooling/IDE support
+
 ## Databases
 
 ### Relational (SQL)
@@ -90,6 +118,25 @@ Core technologies, frameworks, databases, and message queues for modern backend 
 - Multi-tenant applications
 
 **When to Choose:** Need ACID guarantees, complex queries/joins, data integrity critical
+
+#### SQL Server
+**Market Position:** Enterprise standard, especially in Microsoft/.NET ecosystem
+
+**Strengths:**
+- ACID compliance, enterprise-grade reliability
+- Excellent integration with .NET and Entity Framework Core
+- Always On availability groups (high availability)
+- Temporal Tables (built-in versioning)
+- In-Memory OLTP (extreme performance)
+- Azure SQL seamless cloud migration
+
+**Use Cases:**
+- Enterprise applications
+- .NET-based systems
+- Azure cloud deployments
+- Mission-critical applications
+
+**When to Choose:** .NET ecosystem, Azure deployment, enterprise requirements, need for Microsoft support
 
 ### NoSQL
 
@@ -159,6 +206,18 @@ Core technologies, frameworks, databases, and message queues for modern backend 
 - Powerful query builder
 - Best for: Python backends
 
+**Entity Framework Core** (C#/.NET)
+- Microsoft's modern ORM for .NET
+- LINQ integration for type-safe queries
+- Code-first and database-first approaches
+- Migrations with CLI tooling (`dotnet ef`)
+- Best for: .NET applications, SQL Server/PostgreSQL
+
+**Dapper** (C#/.NET)
+- Micro-ORM for .NET
+- Raw SQL with object mapping
+- Best for: Performance-critical .NET apps, complex queries
+
 ## Message Queues & Event Streaming
 
 ### RabbitMQ
@@ -213,29 +272,42 @@ Core technologies, frameworks, databases, and message queues for modern backend 
 | Django | Moderate | Batteries-included | Full-featured apps |
 | Flask | Moderate | Minimal | Microservices, simple APIs |
 
+### .NET Frameworks
+
+| Framework | Performance | Features | Use Case |
+|-----------|------------|----------|----------|
+| ASP.NET Core MVC | High | Full-featured | Web apps, APIs |
+| Minimal APIs | Very High | Lightweight | Microservices, serverless |
+| gRPC | Very High | Binary protocol | Internal services |
+| SignalR | High | Real-time | WebSocket apps |
+
 ## Technology Selection Flowchart
 
 ```
 Start → Need real-time features?
-       → Yes → Node.js + Socket.io
+       → Yes → Node.js + Socket.io OR ASP.NET Core + SignalR
        → No → Need ML/AI integration?
               → Yes → Python + FastAPI
-              → No → Need maximum performance?
-                     → Yes → Rust + Axum
-                     → No → Need high concurrency?
-                            → Yes → Go + Gin
-                            → No → Node.js + NestJS (safe default)
+              → No → Enterprise/.NET ecosystem?
+                     → Yes → ASP.NET Core + Entity Framework Core
+                     → No → Need maximum performance?
+                            → Yes → Rust + Axum
+                            → No → Need high concurrency?
+                                   → Yes → Go + Gin
+                                   → No → Node.js + NestJS (safe default)
 
 Database Selection:
-ACID needed? → Yes → PostgreSQL
+ACID needed? → Yes → PostgreSQL or SQL Server
             → No → Flexible schema? → Yes → MongoDB
                                    → No → PostgreSQL (default)
+
+.NET Project? → SQL Server (Azure SQL) or PostgreSQL
 
 Caching needed? → Always use Redis
 
 Message Queue:
 Millions msg/sec? → Yes → Kafka
-                 → No → RabbitMQ
+                 → No → RabbitMQ or Azure Service Bus (.NET)
 ```
 
 ## Common Pitfalls
@@ -250,7 +322,10 @@ Millions msg/sec? → Yes → Kafka
 
 - **NestJS:** https://nestjs.com
 - **FastAPI:** https://fastapi.tiangolo.com
+- **ASP.NET Core:** https://learn.microsoft.com/aspnet/core
+- **Entity Framework Core:** https://learn.microsoft.com/ef/core
 - **PostgreSQL:** https://www.postgresql.org/docs/
+- **SQL Server:** https://learn.microsoft.com/sql/sql-server
 - **MongoDB:** https://www.mongodb.com/docs/
 - **Redis:** https://redis.io/docs/
 - **Kafka:** https://kafka.apache.org/documentation/

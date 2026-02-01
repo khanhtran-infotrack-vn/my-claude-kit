@@ -8,7 +8,7 @@ license: MIT
 
 ## Research Methodology
 
-Always honoring **YAGNI**, **KISS**, and **DRY** principles.
+Always honoring **YAGNI**, **KISS**, **DRY**, and **SOLID** principles.
 **Be honest, be brutal, straight to the point, and be concise.**
 
 ### Phase 1: Scope Definition

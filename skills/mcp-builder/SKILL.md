@@ -203,7 +203,10 @@ After initial implementation:
 #### 3.1 Code Quality Review
 
 To ensure quality, review the code for:
-- **DRY Principle**: No duplicated code between tools
+- **YAGNI**: Don't add functionality until necessary
+- **KISS**: Prefer simple solutions over complex ones
+- **DRY**: No duplicated code between tools
+- **SOLID** (for .NET/C#): Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
 - **Composability**: Shared logic extracted into functions
 - **Consistency**: Similar operations return similar formats
 - **Error Handling**: All external calls have error handling

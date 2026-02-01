@@ -6,6 +6,12 @@ Follow these fundamental principles:
 - **YAGNI** (You Aren't Gonna Need It) - Don't add functionality until necessary
 - **KISS** (Keep It Simple, Stupid) - Prefer simple solutions over complex ones
 - **DRY** (Don't Repeat Yourself) - Avoid code duplication
+- **SOLID** (especially for .NET/C# projects):
+  - Single Responsibility - One class, one purpose
+  - Open/Closed - Open for extension, closed for modification
+  - Liskov Substitution - Subtypes must be substitutable
+  - Interface Segregation - Many specific interfaces over one general
+  - Dependency Inversion - Depend on abstractions, not concretions
 
 ## Design Activities
 

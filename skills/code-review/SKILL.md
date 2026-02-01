@@ -19,7 +19,7 @@ Each practice has specific triggers and protocols detailed in reference files.
 
 ## Core Principle
 
-Always honoring **YAGNI**, **KISS**, and **DRY** principles.
+Always honoring **YAGNI**, **KISS**, **DRY**, and **SOLID** principles.
 **Be honest, be brutal, straight to the point, and be concise.**
 
 **Technical correctness over social comfort.** Verify before implementing. Ask before assuming. Evidence before claims.

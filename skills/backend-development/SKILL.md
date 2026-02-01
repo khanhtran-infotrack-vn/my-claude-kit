@@ -1,13 +1,18 @@
 ---
 name: backend-development
-description: Build robust backend systems with modern technologies (Node.js, Python, Go, Rust), frameworks (NestJS, FastAPI, Django), databases (PostgreSQL, MongoDB, Redis), APIs (REST, GraphQL, gRPC), authentication (OAuth 2.1, JWT), testing strategies, security best practices (OWASP Top 10), performance optimization, scalability patterns (microservices, caching, sharding), DevOps practices (Docker, Kubernetes, CI/CD), and monitoring. Use when designing APIs, implementing authentication, optimizing database queries, setting up CI/CD pipelines, handling security vulnerabilities, building microservices, or developing production-ready backend systems.
+description: Build robust backend systems with Node.js/TypeScript, Python, Go, Rust, and C#/.NET. Covers ASP.NET Core with Clean Architecture, Entity Framework Core, MediatR/CQRS patterns, NestJS, FastAPI, databases (PostgreSQL, MongoDB, SQL Server, Redis), APIs (REST, GraphQL, gRPC), OAuth 2.1/JWT authentication, xUnit/Vitest testing, OWASP Top 10 security, Docker/Kubernetes DevOps, and monitoring. Use for API design, authentication, database optimization, CI/CD, security vulnerabilities, microservices, or production-ready systems. Activates for: .NET, C#, ASP.NET Core, Entity Framework Core, EF Core, MediatR, Clean Architecture, NestJS, FastAPI, Django, backend, API, database, authentication, security, DevOps, Kubernetes, Docker.
 license: MIT
-version: 1.0.0
+version: 2.0.0
 ---
 
 # Backend Development Skill
 
 Production-ready backend development with modern technologies, best practices, and proven patterns.
+
+## Core Principles
+
+Always follow **YAGNI**, **KISS**, **DRY**, and **SOLID**:
+- See `backend-code-quality.md` for detailed SOLID examples (TypeScript and C#/.NET)
 
 ## When to Use
 
@@ -51,6 +56,12 @@ See: `references/backend-technologies.md` for detailed comparisons
 - `backend-debugging.md` - Debugging strategies, profiling, logging, production debugging
 - `backend-mindset.md` - Problem-solving, architectural thinking, collaboration
 
+**.NET/C# Specific:**
+- `backend-dotnet-architecture.md` - Clean Architecture, CQRS, MediatR patterns
+- `backend-dotnet-efcore.md` - Entity Framework Core, queries, migrations
+- `backend-dotnet-apis.md` - Controller-based APIs, Result pattern, versioning
+- `backend-dotnet-auth.md` - JWT authentication, ASP.NET Core Identity
+
 ## Key Best Practices (2025)
 
 **Security:** Argon2id passwords, parameterized queries (98% SQL injection reduction), OAuth 2.1 + PKCE, rate limiting, security headers
@@ -79,20 +90,6 @@ See: `references/backend-technologies.md` for detailed comparisons
 | Real-time events | Kafka |
 | .NET real-time | SignalR |
 
-## Implementation Checklist
-
-**API:** Choose style → Design schema → Validate input → Add auth → Rate limiting → Documentation → Error handling
-
-**Database:** Choose DB → Design schema → Create indexes → Connection pooling → Migration strategy → Backup/restore → Test performance
-
-**Security:** OWASP Top 10 → Parameterized queries → OAuth 2.1 + JWT → ASP.NET Core Identity → Security headers → Rate limiting → Input validation → Argon2id passwords
-
-**Testing:** Unit 70% → Integration 20% → E2E 10% → Load tests → Migration tests → Contract tests (microservices)
-
-**Deployment:** Docker → CI/CD → Blue-green/canary → Feature flags → Monitoring → Logging → Health checks
-
 ## Resources
 
-- OWASP Top 10: https://owasp.org/www-project-top-ten/
-- OAuth 2.1: https://oauth.net/2.1/
-- OpenTelemetry: https://opentelemetry.io/
+OWASP Top 10: https://owasp.org/www-project-top-ten/ | OAuth 2.1: https://oauth.net/2.1/ | OpenTelemetry: https://opentelemetry.io/

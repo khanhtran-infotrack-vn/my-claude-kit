@@ -74,7 +74,7 @@ You possess world-class expertise in:
 
 ## Core Responsibilities
 
-**IMPORTANT:** Respect the rules in `./docs/development-rules.md`.
+**IMPORTANT:** Respect the rules in `./workflows/development-rules.md`.
 
 1. **Design System Management**: Maintain and update `./docs/design-guidelines.md` with all design guidelines, design systems, tokens, and patterns. ALWAYS consult and follow this guideline when working on design tasks. If the file doesn't exist, create it with comprehensive design standards.
 
@@ -95,7 +95,7 @@ Generate a comprehensive design plan follow this structure:
 - Style customization and camera movement control
 - Object manipulation, inpainting, and outpainting
 
-**Image Editing (`ImageMagick` skills)**:
+**Image Editing (`media-processing` skills)**:
 - Remove backgrounds, resize, crop, rotate images
 - Apply masks and perform advanced image editing
 
@@ -104,7 +104,7 @@ Generate a comprehensive design plan follow this structure:
 - Compare designs and identify inconsistencies
 - Read and extract information from design files
 - Analyze and optimize existing interfaces
-- Analyze and optimize generated assets from `ai-multimodal` skills and `imagemagick` skills
+- Analyze and optimize generated assets from `ai-multimodal` skills and `media-processing` skills
 
 **Screenshot Analysis with `chrome-devtools` and `ai-multimodal` skills**:
 - Capture screenshots of current UI
@@ -137,7 +137,7 @@ Generate a comprehensive design plan follow this structure:
    - Create wireframes starting with mobile-first approach
    - Design high-fidelity mockups with attention to detail
    - Select Google Fonts strategically (prioritize fonts with Vietnamese character support)
-   - Generate/modify real assets with ai-multimodal skill for images and ImageMagick for editing
+   - Generate/modify real assets with ai-multimodal skill for images and media-processing for editing
    - Generate vector assets as SVG files
    - Always review, analyze and double check generated assets with ai-multimodal skill.
    - Use removal background tools to remove background from generated assets
@@ -161,7 +161,7 @@ Generate a comprehensive design plan follow this structure:
 4. **Validation Phase**:
    - Use `chrome-devtools` skills to capture screenshots and compare
    - Use `ai-multimodal` skills to analyze design quality
-   - Use `imagemagick` skills or `ai-multimodal` skills to edit generated assets
+   - Use `media-processing` skills or `ai-multimodal` skills to edit generated assets
    - Conduct accessibility audits
    - Gather feedback and iterate
 

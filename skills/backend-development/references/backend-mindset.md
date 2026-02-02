@@ -262,19 +262,73 @@ async function getUsers(limit?: number) {
 }
 ```
 
-### Testing Mindset (TDD/BDD)
+### Testing Mindset (Test-First Development - MANDATORY)
 
-**70% happy-path tests drafted by AI, humans focus on edge cases**
+**All backend code follows Test-First Development (TFD):**
 
-**Test-Driven Development (TDD):**
+**Test-First Development (TFD) - The Only Way:**
 ```
-1. Write failing test
-2. Write minimal code to pass
-3. Refactor
-4. Repeat
+1. RED: Write failing test first
+2. GREEN: Write minimal code to pass
+3. REFACTOR: Clean up while green
+4. REPEAT
 ```
 
-**Behavior-Driven Development (BDD):**
+**Why Test-First is Non-Negotiable:**
+- **40-80% fewer production bugs** - Issues caught before code exists
+- **Better design** - Tests force clear interfaces and separation of concerns
+- **Living documentation** - Tests explain expected behavior
+- **Refactor fearlessly** - Green tests = safe to optimize
+- **No dead code** - Every line exists to satisfy a test
+
+**Test-First vs Implementation-First:**
+
+```typescript
+// ❌ WRONG: Implementation-first (Don't do this)
+export async function createUser(data: CreateUserDto) {
+  // Implementation written first, then tests added as afterthought
+  const user = await db.users.insert(data);
+  return user;
+}
+
+// ✅ RIGHT: Test-first (Always do this)
+// Step 1: Write tests that fail
+describe('createUser', () => {
+  it('should create user with valid data', async () => {
+    const user = await createUser({ email: 'test@example.com', name: 'Test' });
+    expect(user.id).toBeDefined();
+    expect(user.email).toBe('test@example.com');
+  });
+
+  it('should reject duplicate email', async () => {
+    await createUser({ email: 'existing@example.com', name: 'First' });
+    await expect(createUser({ email: 'existing@example.com', name: 'Second' }))
+      .rejects.toThrow('Email already exists');
+  });
+
+  it('should hash passwords', async () => {
+    const user = await createUser({ email: 'test@example.com', password: 'plain123' });
+    expect(user.password).not.toBe('plain123');
+    expect(user.password).toMatch(/^\$argon2id\$/);
+  });
+});
+
+// Step 2: Implement minimal code to make tests pass
+export async function createUser(data: CreateUserDto) {
+  const existing = await db.users.findOne({ email: data.email });
+  if (existing) throw new Error('Email already exists');
+  
+  if (data.password) {
+    data.password = await argon2.hash(data.password);
+  }
+  
+  return await db.users.insert(data);
+}
+
+// Step 3: Refactor while keeping tests green
+```
+
+**Behavior-Driven Development (BDD) for Acceptance Tests:**
 ```gherkin
 Feature: User Registration
   Scenario: User registers with valid email
@@ -373,7 +427,10 @@ DELETE /api/v1/users/:id     # Delete user
 - [ ] Design for failure (circuit breakers, retries)
 - [ ] Apply SOLID principles
 - [ ] Consider edge cases (null, empty, boundaries)
-- [ ] Write tests first (TDD/BDD)
+- [ ] **Write tests FIRST (Test-First Development - MANDATORY)**
+- [ ] **Follow RED-GREEN-REFACTOR cycle for all backend code**
+- [ ] **NO Arrange/Act/Assert comments in tests**
+- [ ] **Cover all handlers, validators, and domain logic with tests**
 - [ ] Log with context (structured logging)
 - [ ] Design APIs as products (versioning, docs)
 - [ ] Plan database schema evolution

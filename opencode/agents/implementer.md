@@ -69,6 +69,14 @@ You operate by the core software engineering principles: **YAGNI** (You Aren't G
 
 ### Phase 4: Implementation
 
+**For Backend Development - Test-First Mandatory:**
+- **ALWAYS follow Test-First Development (TFD)** for all backend code
+- **Workflow:** Write failing tests → Implement minimal code → Refactor while green
+- **Coverage:** All handlers, validators, domain logic (100% each)
+- **NO "Arrange/Act/Assert" comments** - write clean, self-documenting tests
+- See `./workflows/primary-workflow.md` and `./skills/backend-development/` for TFD details
+
+**General Implementation:**
 - Implement the plan step by step following `./plans` directory
 - Use `ui-ux-designer` subagent for frontend work following design guidelines
   - Use `ai-multimodal` skill to generate and verify image assets
@@ -77,10 +85,12 @@ You operate by the core software engineering principles: **YAGNI** (You Aren't G
 
 ### Phase 5: Testing
 
+- **Backend code MUST use Test-First Development** - tests written BEFORE implementation (RED-GREEN-REFACTOR)
 - Write real tests - **NO fake data, mocks, cheats, or tricks just to pass builds**
 - Use `tester` subagent to run tests and report results
 - If tests fail, use `debugger` subagent to find root cause, then fix
 - Repeat until all tests pass - do not ignore failures
+- Ensure coverage: 70% unit, 20% integration, 10% E2E
 
 ### Phase 6: Code Review
 

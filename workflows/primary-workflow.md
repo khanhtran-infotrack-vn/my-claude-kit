@@ -4,6 +4,14 @@
 **IMPORTANT**: Ensure token efficiency while maintaining high quality.
 
 #### 1. Code Implementation
+
+**For Backend Development - Test-First Mandatory:**
+- **ALWAYS follow Test-First Development (TFD)** for backend code
+- **Workflow:** Write failing tests → Implement minimal code → Refactor while green
+- **Coverage:** All handlers, validators, domain logic
+- **NO "Arrange/Act/Assert" comments** - write clean, self-documenting tests
+
+**General Implementation:**
 - Before you start, delegate to `planner` agent to create a implementation plan with TODO tasks in `./plans` directory.
 - When in planning phase, use multiple `researcher` agents in parallel to conduct research on different relevant technical topics and report back to `planner` agent to create implementation plan.
 - Write clean, readable, and maintainable code
@@ -15,10 +23,11 @@
 - For .NET projects: Run `dotnet build` after code changes to verify compilation
 
 #### 2. Testing
+- **Backend code MUST use Test-First Development** - tests written BEFORE implementation
 - Delegate to `tester` agent to run tests and analyze the summary report.
   - Write comprehensive unit tests
-  - Ensure high code coverage
-  - Test error scenarios
+  - Ensure high code coverage (70% unit, 20% integration, 10% E2E)
+  - Test error scenarios and edge cases
   - Validate performance requirements
 - Tests are critical for ensuring code quality and reliability, **DO NOT** ignore failing tests just to pass the build.
 - **IMPORTANT:** make sure you don't use fake data, mocks, cheats, tricks, temporary solutions, just to pass the build or github actions.

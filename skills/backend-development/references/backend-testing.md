@@ -2,6 +2,129 @@
 
 Comprehensive testing approaches, frameworks, and quality assurance practices (2025).
 
+## Test-First Development (MANDATORY)
+
+**All backend code MUST follow Test-First Development (TFD):**
+
+### The TFD Workflow
+
+```
+1. RED: Write a failing test
+   ↓
+2. GREEN: Write minimal code to pass
+   ↓
+3. REFACTOR: Clean up while tests stay green
+   ↓
+4. REPEAT
+```
+
+### Why Test-First?
+
+- **40-80% fewer production bugs** - Issues caught before they exist
+- **Better design** - Forces clear interfaces and separation of concerns
+- **Living documentation** - Tests explain expected behavior
+- **Regression safety** - Refactor with confidence
+- **No dead code** - Every line exists to pass a test
+
+### TFD in Practice
+
+**Bad (Implementation-First):**
+```typescript
+// ❌ Write handler first, test later (or never)
+export async function createUser(data: CreateUserDto) {
+  const user = await db.users.insert(data);
+  return user;
+}
+
+// Test written as afterthought, focuses on what code does, not what it should do
+```
+
+**Good (Test-First):**
+```typescript
+// ✅ 1. RED: Write failing test first
+describe('createUser', () => {
+  it('should create user with valid email', async () => {
+    const userData = { email: 'test@example.com', name: 'Test' };
+    
+    const user = await createUser(userData);
+    
+    expect(user).toMatchObject(userData);
+    expect(user.id).toBeDefined();
+  });
+
+  it('should throw error with duplicate email', async () => {
+    await createUser({ email: 'existing@example.com', name: 'First' });
+    
+    await expect(createUser({ email: 'existing@example.com', name: 'Second' }))
+      .rejects.toThrow('Email already exists');
+  });
+
+  it('should hash password before storing', async () => {
+    const user = await createUser({ email: 'test@example.com', password: 'plain123' });
+    
+    expect(user.password).not.toBe('plain123');
+    expect(user.password).toMatch(/^\$argon2id\$/);
+  });
+});
+
+// ✅ 2. GREEN: Now implement minimal code to pass all tests
+export async function createUser(data: CreateUserDto) {
+  // Check duplicate
+  const existing = await db.users.findOne({ email: data.email });
+  if (existing) throw new Error('Email already exists');
+  
+  // Hash password if present
+  if (data.password) {
+    data.password = await argon2.hash(data.password);
+  }
+  
+  // Create user
+  const user = await db.users.insert(data);
+  return user;
+}
+
+// ✅ 3. REFACTOR: Extract validation, hashing into services while tests stay green
+```
+
+### Clean Test Guidelines
+
+**NO "Arrange/Act/Assert" comments** - Write self-documenting tests:
+
+```typescript
+// ❌ Bad: Redundant comments
+it('should return 404 for nonexistent user', async () => {
+  // Arrange
+  const userId = 'nonexistent-id';
+  
+  // Act
+  const response = await request(app).get(`/users/${userId}`);
+  
+  // Assert
+  expect(response.status).toBe(404);
+});
+
+// ✅ Good: Clear structure without comments
+it('should return 404 for nonexistent user', async () => {
+  const userId = 'nonexistent-id';
+  
+  const response = await request(app).get(`/users/${userId}`);
+  
+  expect(response.status).toBe(404);
+  expect(response.body.error).toBe('User not found');
+});
+```
+
+### Coverage Requirements
+
+**Test-First ensures proper coverage by design:**
+
+- **Handlers:** 100% - All endpoints covered
+- **Validators:** 100% - All validation rules tested
+- **Domain logic:** 100% - All business rules verified
+- **Overall:** 70% unit, 20% integration, 10% E2E
+
+**For comprehensive TFD guide:** See `test-first-development.md`
+
 ## Test Pyramid (70-20-10 Rule)
 
 ```

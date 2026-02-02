@@ -21,6 +21,22 @@ Production-ready backend development with modern technologies, best practices, a
 - **.NET/C# development** with ASP.NET Core, Entity Framework Core, Clean Architecture
 - **SOLID principles** application in any language/framework
 
+## Test-First Development (MANDATORY)
+
+**All backend code MUST follow Test-First Development:**
+
+**Workflow:** Write failing tests → Implement minimal code → Refactor while green
+
+**Coverage:** All handlers, validators, domain logic. NO "Arrange/Act/Assert" comments.
+
+**Why TFD:**
+- 40-80% fewer bugs in production
+- Forces clear API design before implementation
+- Provides regression safety during refactoring
+- Documents expected behavior through tests
+
+See: `references/backend-testing.md` for comprehensive testing strategies
+
 ## Technology Selection Guide
 
 **Languages:** Node.js/TypeScript (full-stack), Python (data/ML), Go (concurrency), Rust (performance), **C#/.NET (enterprise)**
@@ -37,6 +53,10 @@ See: `references/backend-technologies.md` for detailed comparisons
 - `backend-api-design.md` - REST, GraphQL, gRPC patterns and best practices
 - `backend-dotnet.md` - **ASP.NET Core, Entity Framework Core, MediatR/CQRS, Clean Architecture, C# patterns**
 
+**Testing (MANDATORY):**
+- `test-first-development.md` - **Complete TFD guide with examples (READ THIS FIRST)**
+- `backend-testing.md` - Testing strategies, frameworks, tools, CI/CD testing
+
 **Security & Authentication:**
 - `backend-security.md` - OWASP Top 10 2025, security best practices, input validation
 - `backend-authentication.md` - OAuth 2.1, JWT, RBAC, MFA, session management
@@ -46,7 +66,6 @@ See: `references/backend-technologies.md` for detailed comparisons
 - `backend-architecture.md` - Microservices, event-driven, CQRS, saga patterns
 
 **Quality & Operations:**
-- `backend-testing.md` - Testing strategies, frameworks, tools, CI/CD testing
 - `backend-code-quality.md` - **SOLID principles**, design patterns, clean code
 - `backend-devops.md` - Docker, Kubernetes, deployment strategies, monitoring
 - `backend-debugging.md` - Debugging strategies, profiling, logging, production debugging

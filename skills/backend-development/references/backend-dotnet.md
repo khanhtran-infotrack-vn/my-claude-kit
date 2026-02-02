@@ -230,14 +230,150 @@ builder.Services.AddScoped<IEmailSender, SmtpEmailSender>();
 builder.Services.AddScoped<IUserRepository, SqlUserRepository>();
 ```
 
-## ASP.NET Core Minimal APIs
+## ASP.NET Core API Architecture
+
+### Controller-Based vs Minimal APIs
+
+**Use Controller-Based Architecture (Recommended)** for:
+- Enterprise applications with complex business logic
+- Projects requiring strong separation of concerns
+- Teams familiar with MVC/Web API patterns
+- Applications needing advanced features: action filters, model binding, comprehensive validation
+- When you need extensive OpenAPI/Swagger documentation
+- Better testability with dependency injection
+- Large teams requiring consistent code organization
+
+**Use Minimal APIs** only for:
+- Microservices with simple CRUD operations
+- Prototypes and proof-of-concepts
+- Lightweight APIs with few endpoints
+- Performance-critical scenarios where routing overhead matters
+
+## ASP.NET Core Controller-Based APIs
+
+**Prefer Controller-based architecture over Minimal APIs** for enterprise applications requiring:
+- Separation of concerns and testability
+- Complex routing and parameter binding
+- Action filters and middleware
+- OpenAPI/Swagger with detailed documentation
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public sealed class UsersController : ControllerBase
+{
+    private readonly IMediator _mediator;
+    private readonly ILogger<UsersController> _logger;
+
+    public UsersController(IMediator mediator, ILogger<UsersController> logger)
+    {
+        _mediator = mediator;
+        _logger = logger;
+    }
+
+    /// <summary>
+    /// Retrieves all users
+    /// </summary>
+    /// <returns>List of users</returns>
+    [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<UserDto>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<IEnumerable<UserDto>>> GetUsers(CancellationToken ct)
+    {
+        var query = new GetAllUsersQuery();
+        var result = await _mediator.Send(query, ct);
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Retrieves a user by ID
+    /// </summary>
+    /// <param name="id">User ID</param>
+    /// <param name="ct">Cancellation token</param>
+    /// <returns>User details</returns>
+    [HttpGet("{id:guid}")]
+    [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<UserDto>> GetUser(Guid id, CancellationToken ct)
+    {
+        var query = new GetUserByIdQuery(id);
+        var result = await _mediator.Send(query, ct);
+        return result is not null ? Ok(result) : NotFound();
+    }
+
+    /// <summary>
+    /// Creates a new user
+    /// </summary>
+    /// <param name="command">User creation details</param>
+    /// <param name="ct">Cancellation token</param>
+    /// <returns>Created user</returns>
+    [HttpPost]
+    [ProducesResponseType(typeof(UserDto), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<UserDto>> CreateUser(
+        CreateUserCommand command,
+        CancellationToken ct)
+    {
+        var result = await _mediator.Send(command, ct);
+        return CreatedAtAction(
+            nameof(GetUser),
+            new { id = result.Id },
+            result);
+    }
+
+    /// <summary>
+    /// Updates an existing user
+    /// </summary>
+    [HttpPut("{id:guid}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> UpdateUser(
+        Guid id,
+        UpdateUserCommand command,
+        CancellationToken ct)
+    {
+        if (id != command.Id)
+            return BadRequest("ID mismatch");
+
+        var result = await _mediator.Send(command, ct);
+        return result.IsSuccess ? NoContent() : NotFound(result.Error);
+    }
+
+    /// <summary>
+    /// Deletes a user
+    /// </summary>
+    [HttpDelete("{id:guid}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> DeleteUser(Guid id, CancellationToken ct)
+    {
+        var command = new DeleteUserCommand(id);
+        var result = await _mediator.Send(command, ct);
+        return result.IsSuccess ? NoContent() : NotFound(result.Error);
+    }
+}
+```
+
+### Program.cs Setup for Controllers
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "My API",
+        Version = "v1"
+    });
+    // Enable XML comments for Swagger
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    options.IncludeXmlComments(xmlPath);
+});
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
@@ -251,23 +387,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-// Minimal API endpoints
-app.MapGet("/api/users", async (AppDbContext db) =>
-    await db.Users.ToListAsync());
-
-app.MapGet("/api/users/{id:guid}", async (Guid id, AppDbContext db) =>
-    await db.Users.FindAsync(id) is User user
-        ? Results.Ok(user)
-        : Results.NotFound());
-
-app.MapPost("/api/users", async (CreateUserRequest request, AppDbContext db) =>
-{
-    var user = new User { Email = request.Email, Name = request.Name };
-    db.Users.Add(user);
-    await db.SaveChangesAsync();
-    return Results.Created($"/api/users/{user.Id}", user);
-});
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers(); // Map controller routes
 
 app.Run();
 ```

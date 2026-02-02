@@ -1,6 +1,6 @@
 ---
 name: backend-development
-description: Build robust backend systems with Node.js/TypeScript, Python, Go, Rust, and C#/.NET. Covers ASP.NET Core with Clean Architecture, Entity Framework Core, MediatR/CQRS patterns, NestJS, FastAPI, databases (PostgreSQL, MongoDB, SQL Server, Redis), APIs (REST, GraphQL, gRPC), OAuth 2.1/JWT authentication, xUnit/Vitest testing, OWASP Top 10 security, Docker/Kubernetes DevOps, and monitoring. Use for API design, authentication, database optimization, CI/CD, security vulnerabilities, microservices, or production-ready systems. Activates for: .NET, C#, ASP.NET Core, Entity Framework Core, EF Core, MediatR, Clean Architecture, NestJS, FastAPI, Django, backend, API, database, authentication, security, DevOps, Kubernetes, Docker.
+description: Build robust backend systems with Node.js/TypeScript, Python, Go, Rust, and C#/.NET. Covers ASP.NET Core with Controller-based architecture and Clean Architecture, Entity Framework Core, MediatR/CQRS patterns, NestJS, FastAPI, databases (PostgreSQL, MongoDB, SQL Server, Redis), APIs (REST, GraphQL, gRPC), OAuth 2.1/JWT authentication, xUnit/Vitest testing, OWASP Top 10 security, Docker/Kubernetes DevOps, and monitoring. Use for API design, authentication, database optimization, CI/CD, security vulnerabilities, microservices, or production-ready systems.
 ---
 
 # Backend Development Skill

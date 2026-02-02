@@ -145,6 +145,7 @@ When responding to Claude Code questions:
 2. **Load relevant references** from the Quick Reference section above
 3. **Provide specific guidance** using information from loaded references
 4. **Include examples** when helpful
+5. **Reference documentation links** from llms.txt when appropriate
 
 **Loading references:**
 - Read reference files only when needed for the specific question
@@ -178,10 +179,7 @@ When responding to Claude Code questions:
 **For best practices:** Load `references/best-practices.md`
 
 **Documentation links:**
-- llms.txt: https://context7.com/websites/claude_en_claude-code/llms.txt?tokens=10000
-  - Search for specific topics: `https://context7.com/websites/claude_en_claude-code/llms.txt?topic=<topic>&tokens=5000`
-  - Eg. Search for "subagent": `https://context7.com/websites/claude_en_claude-code/llms.txt?topic=subagent&tokens=5000`
-- Main docs: https://docs.claude.com/en/docs/claude-code/
+- Main docs: https://docs.claude.com/claude-code
 - GitHub: https://github.com/anthropics/claude-code
 - Support: support.claude.com
 

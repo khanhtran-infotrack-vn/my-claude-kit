@@ -44,7 +44,7 @@ export class MCPClientManager {
     async getAllTools() {
         const allTools = [];
         for (const [serverName, client] of this.clients.entries()) {
-            const response = await client.listTools({}, { timeout: 300000 });
+            const response = await client.listTools();
             for (const tool of response.tools) {
                 allTools.push({
                     serverName,
@@ -60,7 +60,7 @@ export class MCPClientManager {
     async getAllPrompts() {
         const allPrompts = [];
         for (const [serverName, client] of this.clients.entries()) {
-            const response = await client.listPrompts({}, { timeout: 300000 });
+            const response = await client.listPrompts();
             for (const prompt of response.prompts) {
                 allPrompts.push({
                     serverName,
@@ -75,7 +75,7 @@ export class MCPClientManager {
     async getAllResources() {
         const allResources = [];
         for (const [serverName, client] of this.clients.entries()) {
-            const response = await client.listResources({}, { timeout: 300000 });
+            const response = await client.listResources();
             for (const resource of response.resources) {
                 allResources.push({
                     serverName,
@@ -92,19 +92,19 @@ export class MCPClientManager {
         const client = this.clients.get(serverName);
         if (!client)
             throw new Error(`Not connected to server: ${serverName}`);
-        return await client.callTool({ name: toolName, arguments: args }, undefined, { timeout: 300000 });
+        return await client.callTool({ name: toolName, arguments: args });
     }
     async getPrompt(serverName, promptName, args) {
         const client = this.clients.get(serverName);
         if (!client)
             throw new Error(`Not connected to server: ${serverName}`);
-        return await client.getPrompt({ name: promptName, arguments: args }, { timeout: 300000 });
+        return await client.getPrompt({ name: promptName, arguments: args });
     }
     async readResource(serverName, uri) {
         const client = this.clients.get(serverName);
         if (!client)
             throw new Error(`Not connected to server: ${serverName}`);
-        return await client.readResource({ uri }, { timeout: 300000 });
+        return await client.readResource({ uri });
     }
     async cleanup() {
         for (const client of this.clients.values()) {

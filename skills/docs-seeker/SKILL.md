@@ -1,7 +1,6 @@
 ---
 name: docs-seeker
 description: "Searching internet for technical documentation using llms.txt standard, GitHub repositories via Repomix, and parallel exploration. Use when user needs: (1) Latest documentation for libraries/frameworks, (2) Documentation in llms.txt format, (3) GitHub repository analysis, (4) Documentation without direct llms.txt support, (5) Multiple documentation sources in parallel"
-version: 1.0.0
 ---
 
 # Documentation Discovery & Analysis
@@ -196,7 +195,7 @@ Launch 3 Explorer agents simultaneously:
 For comprehensive guides, examples, and best practices:
 
 **Workflows:**
-- [WORKFLOWS.md](./WORKFLOWS.md) — Detailed workflow examples and strategies
+- [workflows.md](./references/workflows.md) — Detailed workflow examples and strategies
 
 **Reference guides:**
 - [Tool Selection](./references/tool-selection.md) — Complete guide to choosing and using tools

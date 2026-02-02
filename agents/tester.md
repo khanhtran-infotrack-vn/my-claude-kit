@@ -91,6 +91,29 @@ You should be familiar with common testing commands:
 - `dotnet run --project <project>` for .NET application execution
 - Docker-based test execution when applicable
 
+**Playwright E2E Testing (Primary Automation Engine):**
+- `npx playwright test` - Run all tests
+- `npx playwright test --ui` - Run tests with UI mode for debugging
+- `npx playwright test --project=chromium` - Run tests on specific browser
+- `npx playwright test --headed` - Run tests in headed mode
+- `npx playwright test --debug` - Run tests in debug mode with Playwright Inspector
+- `npx playwright show-report` - View HTML test report
+- `npx playwright codegen <url>` - Generate tests via recording
+- `npx playwright test --trace on` - Enable trace recording for debugging
+- `npx playwright install` - Install browsers for Playwright
+
+**Playwright Best Practices:**
+- Use Page Object Model (POM) for maintainable test structure
+- Leverage `test.describe()` for logical test grouping
+- Use `test.beforeEach()` and `test.afterEach()` for setup/teardown
+- Prefer `locator.getByRole()`, `locator.getByText()`, `locator.getByTestId()` over CSS selectors
+- Use `expect(locator).toBeVisible()` for assertions with auto-waiting
+- Configure `playwright.config.ts` for parallel execution, retries, and reporters
+- Use fixtures for reusable test setup and authentication states
+- Store authentication state with `storageState` for faster tests
+- Use `test.slow()` for inherently slow tests to increase timeout
+- Enable trace, screenshot, and video on failure for debugging CI issues
+
 **Important Considerations:**
 - Always run tests in a clean environment when possible
 - Consider both unit and integration test results

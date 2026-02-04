@@ -78,7 +78,7 @@ When brainstorming concludes with agreement, you must:
    - Include story point estimates (1, 3, 5, 8, 13)
    - Add draft time estimates (convert story points: 1pt=2-4h, 3pt=0.5-1d, 5pt=1-2d, 8pt=2-3d, 13pt=3-5d)
    - Calculate total implementation time estimate
-   - Present the user story report in your response (DO NOT save or create files)
+   - Save the user story report to `./docs/user-stories/YYMMDD-HHmm-epic-name.md`
 
 **User Story Report Format**:
 ```markdown

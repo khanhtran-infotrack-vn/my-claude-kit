@@ -22,6 +22,9 @@ Generates well-formed user stories with acceptance criteria from epics.
 **Usage**: 
 - Generate stories: `python scripts/user_story_generator.py`
 - Plan sprint: `python scripts/user_story_generator.py sprint [capacity]`
+- Save to file: `python scripts/user_story_generator.py --save [path]`
+  - If no path provided, saves to `docs/user-stories/YYMMDD-HHmm-epic-name.md`
+  - Custom path: `python scripts/user_story_generator.py --save /path/to/file.md`
 
 **Features**:
 - Breaks epics into stories
@@ -29,3 +32,4 @@ Generates well-formed user stories with acceptance criteria from epics.
 - Automatic point estimation
 - Priority assignment
 - Sprint planning with capacity
+- Save user stories to markdown files

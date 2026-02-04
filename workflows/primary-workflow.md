@@ -3,6 +3,17 @@
 **IMPORTANT:** Analyze the skills catalog and activate the skills that are needed for the task during the process.
 **IMPORTANT**: Ensure token efficiency while maintaining high quality.
 
+#### 0. Discovery (Optional)
+**When requirements are unclear or architectural decisions need exploration:**
+- Delegate to `brainstormer` agent to:
+  - Explore multiple solution approaches with pros/cons
+  - Debate technical trade-offs and challenge assumptions
+  - Validate feasibility and consider all stakeholders
+  - Create a comprehensive markdown summary report with recommended solution
+  - Generate INVEST-compliant user stories with acceptance criteria and time estimates
+  - Save user story report to `./docs/user-stories/YYMMDD-HHmm-epic-name.md`
+- **Note:** brainstormer provides advisory only - does NOT implement
+
 #### 1. Code Implementation
 
 **For Backend Development - Test-First Mandatory:**

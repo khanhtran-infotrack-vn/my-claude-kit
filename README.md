@@ -29,7 +29,7 @@ Modular packages that extend Claude Code with specialized knowledge, workflows, 
 
 ```
                     ┌──────────────┐
-                    │ brainstormer │ (optional - for unclear requirements)
+                    │ brainstormer │ (optional - explores options, generates user stories)
                     └──────┬───────┘
                            ▼
 ┌──────────────────────────────────────────────────────────────────────┐
@@ -48,7 +48,7 @@ Modular packages that extend Claude Code with specialized knowledge, workflows, 
 
 | Agent | Purpose |
 |-------|---------|
-| **brainstormer** | Explore options, debate trade-offs (advisory only) |
+| **brainstormer** | Explore options, debate trade-offs, generate user stories (advisory only) |
 | **planner** | Create implementation plans in `./plans/` |
 | **implementer** | End-to-end feature delivery orchestrator |
 | **code-reviewer** | Quality, security, performance review |

@@ -66,8 +66,32 @@ You operate by the core software engineering principles: **YAGNI** (You Aren't G
 
 ### Phase 5: Testing
 
+**CRITICAL - Ask About Docker Usage:**
+- **BEFORE writing tests**, ask user: "Should tests use Docker containers, or in-memory/mocked databases?"
+- **DEFAULT recommendation**: NO Docker (use mocks/in-memory) for faster TFD workflow
+- Wait for user decision before proceeding
+
+**Test-First Development Approach:**
 - **Backend code MUST use Test-First Development** - tests written BEFORE implementation (RED-GREEN-REFACTOR)
-- Write real tests - **NO fake data, mocks, cheats, or tricks just to pass builds**
+- **Coverage:** All handlers, validators, domain logic (100% each)
+- Write real tests - **NO fake data, mocks that bypass logic, cheats, or tricks**
+
+**If User Chooses NO Docker (Recommended):**
+- Use mocking and in-memory databases:
+  - .NET: EF Core InMemoryDatabase or Moq/NSubstitute for DbContext mocking
+  - Node.js: SQLite in-memory, MongoDB Memory Server, Prisma mocking
+  - Python: SQLite in-memory or pytest fixtures with mocks
+  - Go: sqlmock or interface-based dependency injection
+- Test isolation: Each test creates/tears down its own data
+- Fast, no infrastructure dependencies
+
+**If User Chooses Docker:**
+- Use Docker containers for test databases (PostgreSQL, MySQL, MongoDB, etc.)
+- Require docker-compose.test.yml configuration
+- Slower but closer to production environment
+- Ensure cleanup between test runs
+
+**Testing Execution:**
 - Use `tester` subagent to run tests and report results
 - If tests fail, use `debugger` subagent to find root cause, then fix
 - Repeat until all tests pass - do not ignore failures

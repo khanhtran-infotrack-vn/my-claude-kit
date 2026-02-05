@@ -34,14 +34,33 @@
 - For .NET projects: Run `dotnet build` after code changes to verify compilation
 
 #### 2. Testing
+
+**CRITICAL - Ask About Docker Usage:**
+- **BEFORE writing tests**, ask user: "Should tests use Docker containers, or in-memory/mocked databases?"
+- **DEFAULT recommendation**: NO Docker (use mocks/in-memory) for faster TFD workflow
+- Wait for user decision before proceeding
+
+**Test-First Development:**
 - **Backend code MUST use Test-First Development** - tests written BEFORE implementation
 - Delegate to `tester` agent to run tests and analyze the summary report.
   - Write comprehensive unit tests
   - Ensure high code coverage (70% unit, 20% integration, 10% E2E)
   - Test error scenarios and edge cases
   - Validate performance requirements
+
+**If User Chooses NO Docker (Recommended):**
+- Use in-memory databases and mocks (EF Core InMemory, SQLite :memory:, MongoDB Memory Server)
+- Fast execution, no infrastructure dependencies
+- Better for TFD workflow
+
+**If User Chooses Docker:**
+- Use Docker containers for test databases
+- Configure docker-compose.test.yml
+- Slower but production-like environment
+
+**Quality Standards:**
 - Tests are critical for ensuring code quality and reliability, **DO NOT** ignore failing tests just to pass the build.
-- **IMPORTANT:** make sure you don't use fake data, mocks, cheats, tricks, temporary solutions, just to pass the build or github actions.
+- **IMPORTANT:** make sure you don't use fake data, mocks that bypass logic, cheats, tricks, temporary solutions, just to pass the build or github actions.
 - **IMPORTANT:** Always fix failing tests follow the recommendations and delegate to `tester` agent to run tests again, only finish your session when all tests pass.
 
 #### 3. Code Quality

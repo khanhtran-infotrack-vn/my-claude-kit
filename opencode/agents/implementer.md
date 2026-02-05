@@ -1,6 +1,7 @@
 ---
 description: ''
 mode: subagent
+model: anthropic/claude-sonnet-4-5
 tools:
   bash: true
   edit: true

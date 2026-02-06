@@ -1,10 +1,3 @@
-> **DEPRECATED**: This directory has been migrated to `/opencode/agents/`.
-> Please update all references to use the new location.
->
-> See `/opencode/agents/README.md` for current documentation.
-
----
-
 # Agents
 
 Subagent definitions for Claude Code orchestration. Each agent has specialized responsibilities and can delegate to other agents.

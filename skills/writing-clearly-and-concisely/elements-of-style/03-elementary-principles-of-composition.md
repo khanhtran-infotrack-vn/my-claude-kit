@@ -58,9 +58,9 @@ If the paragraph forms part of a larger composition, its relation to what preced
 
 According to the writer's purpose, he may, as indicated above, relate the body of the paragraph to the topic sentence in one or more of several different ways. He may make the meaning of the topic sentence clearer by restating it in other forms, by defining its terms, by denying the contrary, by giving illustrations or specific instances; he may establish it by proofs; or he may develop it by showing its implications and consequences. In a long paragraph, he may carry out several of these processes.
 
-1 Now, to be properly enjoyed, a walking tour should be gone upon alone. 2 If you go in a company, or even in pairs, it is no longer a walking tour in anything but name; it is something else and more in the nature of a picnic. 3 A walking tour should be gone upon alone, because freedom is of the essence; because you should be able to stop and go on, and follow this way or that, as the freak takes you; and because you must have your own pace, and neither trot alongside a champion walker, nor mince in time with a girl. 4 And you must be open to all impressions and let your thoughts take colour from what you see. 5 You should be as a pipe for any wind to play upon. 6 “I cannot see the wit,” says Hazlitt, “of walking and talking at the same time. 7 When I am in the country, I wish to vegetate like the country,” which is the gist of all that can be said upon the matter. 8 There should be no cackle of voices at your elbow, to jar on the meditative silence of the morning. 9 And so long as a man is reasoning he cannot surrender himself to that fine intoxication that comes of much motion in the open air, that begins in a sort of dazzle and sluggishness of the brain, and ends in a peace that passes comprehension.—Stevenson, Walking Tours.
+1 Now, to be properly enjoyed, a walking tour should be gone upon alone. 2 If you go in a company, or even in pairs, it is no longer a walking tour in anything but name; it is something else and more in the nature of a picnic. 3 A walking tour should be gone upon alone, because freedom is of the essence; because you should be able to stop and go on, and follow this way or that, as the freak takes you; and because you must have your own pace, and neither trot alongside a champion walker, nor mince in time with a girl. 4 And you must be open to all impressions and let your thoughts take colour from what you see. 5 You should be as a pipe for any wind to play upon. 6 "I cannot see the wit," says Hazlitt, "of walking and talking at the same time. 7 When I am in the country, I wish to vegetate like the country," which is the gist of all that can be said upon the matter. 8 There should be no cackle of voices at your elbow, to jar on the meditative silence of the morning. 9 And so long as a man is reasoning he cannot surrender himself to that fine intoxication that comes of much motion in the open air, that begins in a sort of dazzle and sluggishness of the brain, and ends in a peace that passes comprehension.—Stevenson, Walking Tours.
 
-1 Topic sentence. 2 The meaning made clearer by denial of the contrary. 3 The topic sentence repeated, in abridged form, and supported by three reasons; the meaning of the third (“you must have your own pace”) made clearer by denying the contrary. 4 A fourth reason, stated in two forms. 5 The same reason, stated in still another form. 6–7 The same reason as stated by Hazlitt. 8 Repetition, in paraphrase, of the quotation from Hazlitt. 9 Final statement of the fourth reason, in language amplified and heightened to form a strong conclusion.
+1 Topic sentence. 2 The meaning made clearer by denial of the contrary. 3 The topic sentence repeated, in abridged form, and supported by three reasons; the meaning of the third ("you must have your own pace") made clearer by denying the contrary. 4 A fourth reason, stated in two forms. 5 The same reason, stated in still another form. 6–7 The same reason as stated by Hazlitt. 8 Repetition, in paraphrase, of the quotation from Hazlitt. 9 Final statement of the fourth reason, in language amplified and heightened to form a strong conclusion.
 
 1 It was chiefly in the eighteenth century that a very different conception of history grew up. 2 Historians then came to believe that their task was not so much to paint a picture as to solve a problem; to explain or illustrate the successive phases of national growth, prosperity, and adversity. 3 The history of morals, of industry, of intellect, and of art; the changes that take place in manners or beliefs; the dominant ideas that prevailed in successive periods; the rise, fall, and modification of political constitutions; in a word, all the conditions of national well-being became the subject of their works. 4 They sought rather to write a history of peoples than a history of kings. 5 They looked especially in history for the chain of causes and effects. 6 They undertook to study in the past the physiology of nations, and hoped by applying the experimental method on a large scale to deduce some lessons of real value about the conditions on which the welfare of society mainly depend.—Lecky, The Political Value of History.
 
@@ -94,7 +94,7 @@ This is much better than
 
 My first visit to Boston will always be remembered by me.
 
-The latter sentence is less direct, less bold, and less concise. If the writer tries to make it more concise by omitting “by me,”
+The latter sentence is less direct, less bold, and less concise. If the writer tries to make it more concise by omitting "by me,"
 
 My first visit to Boston will always be remembered,
 
@@ -125,7 +125,7 @@ A common fault is to use as the subject of a passive construction a noun which e
 | Mobilization of the army was rapidly effected. | The army was rapidly mobilized. |
 | Confirmation of these reports cannot be obtained. | These reports cannot be confirmed. |
 
-Compare the _sentence,_ “The export of gold was prohibited,” in which the predicate “was prohibited” expresses something not implied in “export.”
+Compare the _sentence,_ "The export of gold was prohibited," in which the predicate "was prohibited" expresses something not implied in "export."
 
 The habitual use of the active voice makes for forcible writing. This is true not only in narrative principally concerned with action, but in writing of any kind. Many a tame sentence of description or exposition can be made lively and emphatic by substituting a verb in the active voice for some such perfunctory expression as *there is*, or *could be heard*.
 
@@ -202,13 +202,13 @@ Taming a sea-horse, thought a rarity,
 
 Which Claus of Innsbruck cast in bronze for me.
 
-These words call up pictures. Recall how in The Bishop Orders his Tomb in St. Praxed's Church “the Renaissance spirit—its worldliness, inconsistency, pride, hypocrisy, ignorance of itself, love of art, of luxury, of good Latin,” to quote Ruskin's comment on the poem, is made manifest in specific details and in concrete terms.
+These words call up pictures. Recall how in The Bishop Orders his Tomb in St. Praxed's Church "the Renaissance spirit—its worldliness, inconsistency, pride, hypocrisy, ignorance of itself, love of art, of luxury, of good Latin," to quote Ruskin's comment on the poem, is made manifest in specific details and in concrete terms.
 
 Prose, in particular narrative and descriptive prose, is made vivid by the same means. If the experiences of Jim Hawkins and of David Balfour, of Kim, of Nostromo, have seemed for the moment real to countless readers, if in reading Carlyle we have almost the sense of being physically present at the taking of the Bastille, it is because of the definiteness of the details and the concreteness of the terms used. It is not that every detail is given; that would be impossible, as well as to no purpose; but that all the significant details are given, and not vaguely, but with such definiteness that the reader, in imagination, can project himself into the scene.
 
 In exposition and in argument, the writer must likewise never lose his hold upon the concrete, and even when he is dealing with general principles, he must give particular instances of their application.
 
-“This superiority of specific expressions is clearly due to the effort required to translate words into thoughts. As we do not think in generals, but in particulars—as whenever any class of things is referred to, we represent it to ourselves by calling to mind individual members of it, it follows that when an abstract word is used, the hearer or reader has to choose, from his stock of images, one or more by which he may figure to himself the genus mentioned. In doing this, some delay must arise, some force be expended; and if by employing a specific term an appropriate image can be at once suggested, an economy is achieved, and a more vivid impression produced.”
+"This superiority of specific expressions is clearly due to the effort required to translate words into thoughts. As we do not think in generals, but in particulars—as whenever any class of things is referred to, we represent it to ourselves by calling to mind individual members of it, it follows that when an abstract word is used, the hearer or reader has to choose, from his stock of images, one or more by which he may figure to himself the genus mentioned. In doing this, some delay must arise, some force be expended; and if by employing a specific term an appropriate image can be at once suggested, an economy is achieved, and a more vivid impression produced."
 
 Herbert Spencer, from whose Philosophy of Style the preceding paragraph is quoted, illustrates the principle by the sentences:
 
@@ -292,7 +292,7 @@ By this principle, an article or a preposition applying to all the members of a 
 | The French, the Italians, Spanish, and Portuguese | The French, the Italians, the Spanish, and the Portuguese |
 | In spring, summer, or in winter | In spring, summer, or winter (In spring, in summer, or in winter) |
 
-Correlative expressions (*both, and*; *not, but*; *not only, but also*; *either, or*; *first, second, third*; and the like) should be followed by the same grammatical construction, that is, virtually, by the same part of speech. (Such combinations as “both Henry and I,” “not silk, but a cheap substitute,” are obviously within the rule.) Many violations of this rule (as the first three below) arise from faulty arrangement; others (as the last) from the use of unlike constructions.
+Correlative expressions (*both, and*; *not, but*; *not only, but also*; *either, or*; *first, second, third*; and the like) should be followed by the same grammatical construction, that is, virtually, by the same part of speech. (Such combinations as "both Henry and I," "not silk, but a cheap substitute," are obviously within the rule.) Many violations of this rule (as the first three below) arise from faulty arrangement; others (as the last) from the use of unlike constructions.
 
 | Original | Revision |
 | --- | --- |
@@ -346,7 +346,7 @@ Modifiers should come, if possible, next to the word they modify. If several exp
 | --- | --- |
 | All the members were not present. | Not all the members were present. |
 | He only found two mistakes. | He found only two mistakes. |
-| Major R. E. Joyce will give a lecture on Tuesday evening in Bailey Hall, to which the public is invited, on “My Experiences in Mesopotamia” at eight P. M. | On Tuesday evening at eight P. M., Major R. E. Joyce will give in Bailey Hall a lecture on “My Experiences in Mesopotamia.” The public is invited. |
+| Major R. E. Joyce will give a lecture on Tuesday evening in Bailey Hall, to which the public is invited, on "My Experiences in Mesopotamia" at eight P. M. | On Tuesday evening at eight P. M., Major R. E. Joyce will give in Bailey Hall a lecture on "My Experiences in Mesopotamia." The public is invited. |
 
 ### Rule 17. In summaries, keep to one tense.
 
@@ -360,7 +360,7 @@ The Friar confesses that it was he who married them.
 
 Apart from the exceptions noted, whichever tense the writer chooses, he should use throughout. Shifting from one tense to the other gives the appearance of uncertainty and irresolution (compare Rule 15).
 
-In presenting the statements or the thought of some one else, as in summarizing an essay or reporting a speech, the writer should avoid intercalating such expressions as “he said,” “he stated,” “the speaker added,” “the speaker then went on to say,” “the author also thinks,” or the like. He should indicate clearly at the outset, once for all, that what follows is summary, and then waste no words in repeating the notification.
+In presenting the statements or the thought of some one else, as in summarizing an essay or reporting a speech, the writer should avoid intercalating such expressions as "he said," "he stated," "the speaker added," "the speaker then went on to say," "the author also thinks," or the like. He should indicate clearly at the outset, once for all, that what follows is summary, and then waste no words in repeating the notification.
 
 In notebooks, in newspapers, in handbooks of literature, summaries of one kind or another may be indispensable, and for children in primary schools it is a useful exercise to retell a story in their own words. But in the criticism or interpretation of literature the writer should be careful to avoid dropping into summary. He may find it necessary to devote one or two sentences to indicating the subject, or the opening situation, of the work he is discussing; he may cite numerous details to illustrate its qualities. But he should aim to write an orderly discussion supported by evidence, not a summary with occasional comment. Similarly, if the scope of his discussion includes a number of works, he will as a rule do better not to take them up singly in chronological order, but to aim from the beginning at establishing general conclusions.
 

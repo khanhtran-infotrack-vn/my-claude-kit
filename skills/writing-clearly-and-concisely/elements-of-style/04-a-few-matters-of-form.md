@@ -22,13 +22,13 @@ He declares (and why should we doubt his good faith?) that he is now certain of 
 
 **Quotations.** Formal quotations, cited as documentary evidence, are introduced by a colon and enclosed in quotation marks.
 
-The provision of the Constitution is: “No tax or duty shall be laid on articles exported from any state.”
+The provision of the Constitution is: "No tax or duty shall be laid on articles exported from any state."
 
 Quotations grammatically in apposition or the direct objects of verbs are preceded by a comma and enclosed in quotation marks.
 
-[](https://www.gutenberg.org/files/37134/37134-h/37134-h.htm "34")I recall the maxim of La Rochefoucauld, “Gratitude is a lively sense of benefits to come.”
+[](https://www.gutenberg.org/files/37134/37134-h/37134-h.htm "34")I recall the maxim of La Rochefoucauld, "Gratitude is a lively sense of benefits to come."
 
-Aristotle says, “Art is an imitation of nature.”
+Aristotle says, "Art is an imitation of nature."
 
 Quotations of an entire line, or more, of verse, are begun on a fresh line and centered, but need not be enclosed in quotation marks.
 
@@ -66,7 +66,7 @@ Othello II.iii. 264–267, III.iii. 155–161.
 
 know-ledge (not knowl-edge); Shake-speare (not Shakes-peare); de-scribe (not des-cribe); atmo-sphere (not atmos-phere);
 
-(b) Divide “on the vowel:”
+(b) Divide "on the vowel:"
 
 edi-ble (not ed-ible); propo-sition; ordi-nary; espe-cial; reli-gious; oppo-nents; regu-lar; classi-fi-ca-tion (three divisions allowable); deco-rative; presi-dent;
 

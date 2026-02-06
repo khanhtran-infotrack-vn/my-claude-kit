@@ -2,7 +2,7 @@
 
 (Some of the forms here listed, as *like I did*, are downright bad English; others, as the split infinitive, have their defenders, but are in such general disfavor that it is at least inadvisable to use them; still others, as *case*, *factor*, *feature*, *interesting*, *one of the most*, are good in their place, but are constantly obtruding themselves into places where they have no right to be. If the writer will make it his purpose from the beginning to express accurately his own individual thought, and will refuse to be satisfied with a ready-made formula that saves him the trouble of doing so, this last set of expressions will cause him little trouble. But if he finds that in a moment of inadvertence he has used one of them, his proper course will probably be not to patch up the sentence by substituting one word or set of words for another, but to recast it completely, as illustrated in a number of examples below and in others under Rules 12 and 13.)
 
-**All right.** Idiomatic in familiar speech as a detached phrase in the sense, “Agreed,” or “Go ahead.” In other uses better avoided. Always written as two words.
+**All right.** Idiomatic in familiar speech as a detached phrase in the sense, "Agreed," or "Go ahead." In other uses better avoided. Always written as two words.
 
 **As good or better than.** Expressions of this type should be corrected by rearranging the sentence.
 
@@ -12,7 +12,7 @@
 
 **As to whether.** *Whether* is sufficient; see under Rule 13.
 
-**Bid.** Takes the infinitive without *to*. The past tense in the sense, _“ordered,”_ is *bade*.
+**Bid.** Takes the infinitive without *to*. The past tense in the sense, _"ordered,"_ is *bade*.
 
 **But.** Unnecessary after *doubt* and *help*.
 
@@ -31,7 +31,7 @@ Particularly awkward is the following of one *but* by another, making a contrast
 
 **Can.** Means *am (is, are) able*. Not to be used as a substitute for *may*.
 
-**Case.** The Concise Oxford Dictionary begins its definition of this word: “instance of a thing's occurring; usual state of affairs.” In these two senses, the word is usually unnecessary.
+**Case.** The Concise Oxford Dictionary begins its definition of this word: "instance of a thing's occurring; usual state of affairs." In these two senses, the word is usually unnecessary.
 
 | Original | Revision |
 | --- | --- |
@@ -48,13 +48,13 @@ See Wood, Suggestions to Authors, pp. 68–71, and Quiller-Couch, The Art of Wri
 | --- | --- |
 | Acts of a hostile character | Hostile acts |
 
-**Claim, vb.** With object-noun, means *lay claim to*. May be used with a dependent clause if this sense is clearly involved: “He claimed that he was the sole surviving heir.” (But even here, “claimed to be” would be better.) Not to be used as a substitute for *declare*, *maintain*, or *charge*.
+**Claim, vb.** With object-noun, means *lay claim to*. May be used with a dependent clause if this sense is clearly involved: "He claimed that he was the sole surviving heir." (But even here, "claimed to be" would be better.) Not to be used as a substitute for *declare*, *maintain*, or *charge*.
 
 **Clever.** This word has been greatly overused; it is best restricted to ingenuity displayed in small matters.
 
 **Compare.** To *compare to* is to point out or imply resemblances, between objects regarded as essentially of different order; to *compare with* is mainly to point out differences, between objects regarded as essentially of the same order. Thus life has been compared to a pilgrimage, to a drama, to a battle; Congress may be compared with the British Parliament. Paris has been compared to ancient Athens; it may be compared with modern London.
 
-**Consider.** Not followed by *as* when it means “believe to be.” “I consider him thoroughly competent.” Compare, “The lecturer considered Cromwell first as soldier and second as administrator,” where “considered” means “examined” or “discussed.”
+**Consider.** Not followed by *as* when it means "believe to be." "I consider him thoroughly competent." Compare, "The lecturer considered Cromwell first as soldier and second as administrator," where "considered" means "examined" or "discussed."
 
 **Data.** A plural, like *phenomena* and *strata*.
 
@@ -68,13 +68,13 @@ These data were tabulated.
 
 **Don't.** Contraction of *do not*. The contraction of *does not* is *doesn't*.
 
-**Due to.** Incorrectly used for *through*, *because of*, or *owing to*, in adverbial phrases: “He lost the first game, due to carelessness.” In correct use related as predicate or as modifier to a particular noun: “This invention is due to Edison;” “losses due to preventable fires.”
+**Due to.** Incorrectly used for *through*, *because of*, or *owing to*, in adverbial phrases: "He lost the first game, due to carelessness." In correct use related as predicate or as modifier to a particular noun: "This invention is due to Edison;" "losses due to preventable fires."
 
 **Folk.** A collective noun, equivalent to *people*. Use the singular form only.
 
-**Effect.** As noun, means *result*; as verb, means *_to_ bring about*, *accomplish* (not to be confused with *affect*, which means “to influence”).
+**Effect.** As noun, means *result*; as verb, means *_to_ bring about*, *accomplish* (not to be confused with *affect*, which means "to influence").
 
-As noun, often loosely used in perfunctory writing about fashions, music, painting, and other arts: “an Oriental effect;” “effects in pale green;” “very delicate effects;” “broad effects;” “subtle effects;” “a charming effect was produced by.” The writer who has a definite meaning to express will not take refuge in such vagueness.
+As noun, often loosely used in perfunctory writing about fashions, music, painting, and other arts: "an Oriental effect;" "effects in pale green;" "very delicate effects;" "broad effects;" "subtle effects;" "a charming effect was produced by." The writer who has a definite meaning to express will not take refuge in such vagueness.
 
 **Etc.** Equivalent to *and the rest*, *and so forth*, and hence not to be used if one of these would be insufficient, that is, if the reader would be left in doubt as to any important particulars. Least open to objection when it represents the last terms of a list already given in full, or immaterial words at the end of a quotation.
 
@@ -131,7 +131,7 @@ However discouraging the prospect, he never lost heart.
 | An interesting story is told of | (Tell the story without preamble.) |
 | In connection with the anticipated visit of Mr. B. to America, it is interesting to recall that he | Mr. B., who it is expected will soon visit America |
 
-**Kind of.** Not to be used as a substitute for *rather* (before adjectives and verbs), or except in familiar style, for *something like* (before nouns). Restrict it to its literal sense: “Amber is a kind of fossil resin;” “I dislike that kind of notoriety.” The same holds true of *sort of*.
+**Kind of.** Not to be used as a substitute for *rather* (before adjectives and verbs), or except in familiar style, for *something like* (before nouns). Restrict it to its literal sense: "Amber is a kind of fossil resin;" "I dislike that kind of notoriety." The same holds true of *sort of*.
 
 **Less.** Should not be misused for *fewer*.
 
@@ -139,7 +139,7 @@ However discouraging the prospect, he never lost heart.
 | --- | --- |
 | He had less men than in the previous campaign | He had fewer men than in the previous campaign |
 
-*Less* refers to quantity, *fewer* to number. “His troubles are less than mine” means “His troubles are not so great as mine.” “His troubles are fewer than mine” means “His troubles are not so numerous as mine.” It is, however, correct to say, “The signers of the petition were less than a hundred,” where the round number *a hundred* is something like a collective noun, and *less* is thought of as meaning a less quantity or amount.
+*Less* refers to quantity, *fewer* to number. "His troubles are less than mine" means "His troubles are not so great as mine." "His troubles are fewer than mine" means "His troubles are not so numerous as mine." It is, however, correct to say, "The signers of the petition were less than a hundred," where the round number *a hundred* is something like a collective noun, and *less* is thought of as meaning a less quantity or amount.
 
 **Like.** Not to be misused for *as*. *Like* governs nouns and pronouns; before phrases and clauses the equivalent word is *as*.
 
@@ -177,7 +177,7 @@ However discouraging the prospect, he never lost heart.
 | --- | --- |
 | Acts of a hostile _nature_ | Hostile acts |
 
-Often vaguely used in such expressions as a “lover of nature;” “poems about nature.” Unless more specific statements follow, the reader cannot tell whether the poems have to do with natural scenery, rural life, the sunset, the untracked wilderness, or the habits of squirrels.
+Often vaguely used in such expressions as a "lover of nature;" "poems about nature." Unless more specific statements follow, the reader cannot tell whether the poems have to do with natural scenery, rural life, the sunset, the untracked wilderness, or the habits of squirrels.
 
 **Near by.** Adverbial phrase, not yet fully accepted as good English, though the analogy of *close by* and *hard by* seems to justify it. *Near*, or *near at hand*, is as good, if not better.
 
@@ -187,7 +187,7 @@ Not to be used as an adjective; use *neighboring*.
 
 **One hundred and one.** Retain the *and* in this and similar expressions, in accordance with the unvarying usage of English prose from Old English times.
 
-**One of the most.** Avoid beginning essays or paragraphs with this formula, as, “One of the most interesting developments of modern science is, etc.;” “Switzerland is one of the most interesting countries of Europe.” There is nothing wrong in this; it is simply threadbare and forcible-feeble.
+**One of the most.** Avoid beginning essays or paragraphs with this formula, as, "One of the most interesting developments of modern science is, etc.;" "Switzerland is one of the most interesting countries of Europe." There is nothing wrong in this; it is simply threadbare and forcible-feeble.
 
 A common blunder is to use a singular verb in a relative clause following this or a similar expression, when the relative is the subject.
 
@@ -223,7 +223,7 @@ In the examples above, the subject of the action is a single, unmodified term, i
 
 **People.** *The people* is a political term, not to be confused with *the public*. From the people comes political support or opposition; from the public comes artistic appreciation or commercial patronage.
 
-**Phase.** Means a stage of transition or development: “the phases of the moon;” “the last phase.” Not to be used for *aspect* or *topic*.
+**Phase.** Means a stage of transition or development: "the phases of the moon;" "the last phase." Not to be used for *aspect* or *topic*.
 
 | Original | Revision |
 | --- | --- |
@@ -251,7 +251,7 @@ In some kinds of formal writing, as geometrical proofs, it may be necessary to u
 
 **Should.** See under **Would**.
 
-**So.** Avoid, in writing, the use of *so* as an intensifier: “so good;” “so warm;” “so delightful.”
+**So.** Avoid, in writing, the use of *so* as an intensifier: "so good;" "so warm;" "so delightful."
 
 On the use of *so* to introduce clauses, see Rule 4.
 
@@ -263,7 +263,7 @@ On the use of *so* to introduce clauses, see Rule 4.
 | --- | --- |
 | To diligently inquire | To inquire diligently |
 
-**State.** Not to be used as a mere substitute for *say*, *remark*. Restrict it to the sense of *express fully or clearly*, as, “He refused to state his objections.”
+**State.** Not to be used as a mere substitute for *say*, *remark*. Restrict it to the sense of *express fully or clearly*, as, "He refused to state his objections."
 
 **Student Body.** A needless and awkward expression meaning no more than the simple word *students*.
 
@@ -280,9 +280,9 @@ On the use of *so* to introduce clauses, see Rule 4.
 | Dayton has adopted the commission system of _government._ | Dayton has adopted government by commission. |
 | The dormitory system | Dormitories |
 
-**Thanking You in Advance.** This sounds as if the writer meant, “It will not be worth my while to write to you again.” In making your request, write, “Will you please,” or “I shall be obliged,” and if anything further seems necessary write a letter of acknowledgment later.
+**Thanking You in Advance.** This sounds as if the writer meant, "It will not be worth my while to write to you again." In making your request, write, "Will you please," or "I shall be obliged," and if anything further seems necessary write a letter of acknowledgment later.
 
-**They.** A common inaccuracy is the use of the plural pronoun when the antecedent is a distributive expression such as *each*, *each one*, *everybody*, *every one*, *many a man*, which, though implying more than one person, requires the pronoun to be in the singular. Similar to this, but with even less justification, is the use of the plural pronoun with the antecedent *anybody*, *any one*, *somebody*, *some one*, the intention being either to avoid the awkward “he or she,” or to avoid committing oneself to either. Some bashful speakers even say, “A friend of mine told me that they, etc.”
+**They.** A common inaccuracy is the use of the plural pronoun when the antecedent is a distributive expression such as *each*, *each one*, *everybody*, *every one*, *many a man*, which, though implying more than one person, requires the pronoun to be in the singular. Similar to this, but with even less justification, is the use of the plural pronoun with the antecedent *anybody*, *any one*, *somebody*, *some one*, the intention being either to avoid the awkward "he or she," or to avoid committing oneself to either. Some bashful speakers even say, "A friend of mine told me that they, etc."
 
 Use *he* with all the above words, unless the antecedent is or must be feminine.
 
@@ -325,13 +325,13 @@ In general, the writer will do well to use *while* only with strict literalness,
 | His brother, whom he said would send him the money | His brother, who he said would send him the money |
 | The man whom he thought was his friend | The man who (that) he thought was his friend (whom he thought his friend) |
 
-**Worth while.** Overworked as a term of vague approval and (with *not*) of disapproval. Strictly applicable only to actions: “Is it worth while to telegraph?”
+**Worth while.** Overworked as a term of vague approval and (with *not*) of disapproval. Strictly applicable only to actions: "Is it worth while to telegraph?"
 
 | Original | Revision |
 | --- | --- |
 | His books are not worth while. | His books are not worth reading (are not worth one's while to read; do not repay reading; are worthless). |
 
-The use of *worth while* before a noun (“a worth while story”) is indefensible.
+The use of *worth while* before a noun ("a worth while story") is indefensible.
 
 **Would.** A conditional statement in the first person requires *should*, not *would*.
 

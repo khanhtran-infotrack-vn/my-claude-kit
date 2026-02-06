@@ -28,51 +28,5 @@
       "Bash(docker volume rm -f :*::*)",
       "Bash(prisma migrate reset:*)"
     ]
-  },
-  "hooks": {
-    "SubagentStart": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"\n[🤖 Subagent START] >>> Type: $CLAUDE_HOOK_MATCHER\""
-          }
-        ]
-      }
-    ],
-    "SubagentStop": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"[🤖 Subagent STOP]  <<< Finished: $CLAUDE_HOOK_MATCHER\n\""
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"[⚡ Skill CALL] Tool: $CLAUDE_HOOK_MATCHER | Args: $CLAUDE_TOOL_INPUT\""
-          }
-        ]
-      }
-    ],
-    "PostToolUseFailure": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"[⚡ Skill FAIL] Tool: $CLAUDE_HOOK_MATCHER failed with input: $CLAUDE_TOOL_INPUT\""
-          }
-        ]
-      }
-    ]
   }
 }

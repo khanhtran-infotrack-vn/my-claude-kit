@@ -9,7 +9,8 @@ This is a collection of Claude Code Skills, Agents, and Workflows. Skills are mo
 ## Structure
 
 ```
-├── agents/          # Subagent definitions (scout, tester, planner, etc.)
+├── opencode/
+│   └── agents/      # Subagent definitions (scout, tester, planner, etc.)
 ├── skills/          # Skill packages with SKILL.md + optional scripts/references/assets
 │   └── document-skills/  # Document manipulation skills (pdf, docx, pptx, xlsx)
 └── workflows/       # Orchestration protocols and development guidelines

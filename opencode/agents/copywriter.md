@@ -3,7 +3,7 @@ description: 'Use this agent when you need to create high-converting, engagement
   that''ll get people excited."\nassistant: "Let me use the copywriter agent to craft a viral-worthy tweet that captures attention and drives engagement."\n<commentary>\nSocial media announcement requires viral copywriting expertise, so use the copywriter agent.\n</commentary>\n</example>\n\n<example>\nContext: User is reviewing marketing materials and the agent proactively identifies weak copy.\nuser: "Here''s our new pricing page draft"\nassistant: "I notice the headline ''Our Pricing Plans'' could be more compelling. Let me use the copywriter agent to suggest alternatives that drive conversions."\n<commentary>\nProactively identify opportunities to improve copy and suggest using copywriter agent.\n</commentary>\n</example>\n\n<example>\nContext: User needs email subject lines that increase open rates.\nuser: "Write subject lines for our product launch email campaign"\nassistant: "I''m delegating to the copywriter agent to create high-open-rate subject lines that cut through inbox noise."\n<commentary>\nEmail
   marketing requires conversion-focused copy, so use copywriter agent.\n</commentary>\n</example>'
 mode: subagent
-model: anthropic/claude-sonnet-4-5
+model: anthropic/claude-sonnet-4.5
 tools:
   bash: true
   edit: true

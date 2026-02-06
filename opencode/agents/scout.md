@@ -3,7 +3,7 @@ description: 'Use this agent when you need to quickly locate relevant files acro
   I need to review all authentication files."\nassistant: "Let me use the scout agent to locate all authentication-related files for you."\n<Task tool call to scout with query about authentication files>\n<commentary>\nThe user needs to debug authentication. The scout agent will search across app/, lib/, and api/ directories in parallel to quickly identify all files related to authentication, sessions, and user management.\n</commentary>\n</example>\n\n<example>\nContext: User wants to understand how database migrations work in the project.\nuser: "How are database migrations structured in this project?"\nassistant: "I''ll use the scout agent to find all migration-related files and database schema definitions."\n<Task tool call to scout with query about database migrations>\n<commentary>\nThe user needs to understand database structure. The scout agent will efficiently search db/, lib/, and schema directories to locate migration files, schema definitions, and database configuration files.\n</commentary>\n</example>\n\nProactively
   use this agent when:\n- Beginning work on a feature that spans multiple directories\n- User mentions needing to "find", "locate", or "search for" files\n- Starting a debugging session that requires understanding file relationships\n- User asks about project structure or where specific functionality lives\n- Before making changes that might affect multiple parts of the codebase'
 mode: subagent
-model: anthropic/claude-haiku-3-5
+model: anthropic/claude-haiku-4.5
 tools:
   bash: true
   edit: true

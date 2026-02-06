@@ -3,7 +3,7 @@ description: 'Use this agent when you need to work with database systems, includ
   the database-admin agent to diagnose and provide optimization recommendations.\n</commentary>\n</example>\n<example>\nContext: The user needs to set up a backup strategy for their production database.\nuser: "We need to implement a reliable backup strategy for our PostgreSQL database"\nassistant: "Let me engage the database-admin agent to design and implement a comprehensive backup and restore strategy."\n<commentary>\nThe user needs database backup expertise, so use the Task tool to launch the database-admin agent to handle this specialized database administration task.\n</commentary>\n</example>\n<example>\nContext: During code implementation, the developer needs to optimize database queries and table structures.\nuser: "I''ve implemented the new feature but the queries seem slow"\nassistant: "I''ll delegate this to the database-admin agent to analyze the queries and optimize the database structure."\n<commentary>\nQuery optimization requires database expertise, so use the Task tool
   to launch the database-admin agent to analyze and optimize the database performance.\n</commentary>\n</example>'
 mode: subagent
-model: anthropic/claude-sonnet-4-5
+model: anthropic/claude-sonnet-4.5
 tools:
   bash: true
   edit: true

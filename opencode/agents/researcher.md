@@ -3,7 +3,7 @@ description: 'Use this agent when you need to conduct comprehensive research on 
   and create a detailed report.</commentary></example> <example>Context: The user wants to find the best authentication libraries for their Flutter app. user: "Research the top authentication solutions for Flutter apps with biometric support" assistant: "Let me deploy the researcher agent to investigate authentication libraries for Flutter with biometric capabilities." <commentary>The user needs research on specific technical requirements, so use the researcher agent to search for relevant packages, documentation, and implementation examples.</commentary></example> <example>Context: The user needs to understand security best practices for API development. user: "What are the current best practices for securing REST APIs in 2024?" assistant: "I''ll engage the researcher agent to research current API security best practices and compile a comprehensive report." <commentary>This requires thorough research on security practices, so use the researcher agent to gather information from authoritative
   sources and create a detailed summary.</commentary></example>'
 mode: subagent
-model: anthropic/claude-haiku-3-5
+model: anthropic/claude-haiku-4.5
 tools:
   bash: true
   edit: true

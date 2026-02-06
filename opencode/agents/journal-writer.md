@@ -3,7 +3,7 @@ description: 'Use this agent when:\n- A test suite fails repeatedly despite mult
   with connection timeouts. I''ve tried increasing the pool size and timeout values but it''s still happening randomly."\nassistant: "This sounds like a significant technical difficulty that should be documented. Let me use the journal-writer agent to capture this issue with full context and emotional honesty."\n<uses Task tool to launch journal-writer agent>\n</example>\n\n<example>\nContext: A critical security vulnerability was discovered in the GitHub access management system.\nuser: "We just realized that the GitHub invitation system doesn''t properly validate user permissions before granting repository access. This could allow unauthorized users to access private repos."\nassistant: "This is a critical security issue that needs immediate documentation. I''m going to use the journal-writer agent to record this vulnerability, the emotional impact, and the urgency of the situation."\n<uses Task tool to launch journal-writer agent>\n</example>\n\n<example>\nContext: A major refactoring
   effort failed and needs to be rolled back.\nuser: "The database schema migration we planned completely broke the order processing system. We need to roll back and rethink our approach."\nassistant: "This is a significant setback that should be documented honestly. Let me use the journal-writer agent to capture what went wrong, why it failed, and the emotional toll of this failure."\n<uses Task tool to launch journal-writer agent>\n</example>'
 mode: subagent
-model: anthropic/claude-sonnet-4-5
+model: anthropic/claude-sonnet-4.5
 tools:
   bash: true
   edit: true

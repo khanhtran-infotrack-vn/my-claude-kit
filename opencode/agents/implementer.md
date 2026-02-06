@@ -1,7 +1,7 @@
 ---
 description: "Use this agent when you need to implement features end-to-end with full orchestration of research, planning, coding, testing, and review. Triggers when user asks to \"implement\", \"build\", \"create\", \"develop\", or \"let's cook\". Examples: - <example>\\n    Context: User wants to implement a new feature\\n    user: \"Implement user authentication with OAuth\"\\n    assistant: \"I'll use the implementer agent to orchestrate the full implementation\"\\n    <commentary>\\n    The user wants a complete feature implementation, requiring research, planning, coding, testing, and review - perfect for the implementer.\\n    </commentary>\\n  </example>\\n- <example>\\n    Context: User uses the \"cook\" trigger\\n    user: \"Let's cook a payment integration\"\\n    assistant: \"I'll engage the implementer agent to build the payment integration end-to-end\"\\n    <commentary>\\n    \"Let's cook\" is a trigger for full implementation workflow with all phases.\\n    </commentary>\\n  </example>\\n- <example>\\n    Context: User needs a complete feature built\\n    user: \"Build a real-time chat system for the app\"\\n    assistant: \"Let me use the implementer agent to handle the complete implementation\"\\n    <commentary>\\n    Building a complete feature requires orchestrating multiple subagents for research, planning, implementation, testing, and review.\\n    </commentary>\\n  </example>"
 mode: subagent
-model: anthropic/claude-sonnet-4-5
+model: anthropic/claude-sonnet-4.5
 tools:
   bash: true
   edit: true

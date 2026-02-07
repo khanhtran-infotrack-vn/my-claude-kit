@@ -6,8 +6,9 @@ Subagent definitions for Claude Code orchestration. Each agent has specialized r
 
 | Agent | Role | Model | Delegates To |
 |-------|------|-------|--------------|
+| **initializer** | Complete project bootstrap from conception to deployment | opus | git-manager, researcher, planner, ui-ux-designer, tester, debugger, code-reviewer, docs-manager, project-manager |
 | **brainstormer** | Solution exploration, architectural decisions, user story generation | default | planner, docs-manager, researcher |
-| **planner** | Research, analysis, implementation planning | default | - |
+| **planner** | Research, analysis, implementation planning | opus | - |
 | **implementer** | End-to-end feature delivery orchestrator | default | researcher, planner, scout, tester, debugger, code-reviewer, ui-ux-designer, docs-manager, project-manager, git-manager |
 | **code-reviewer** | Code quality, security, performance review | sonnet | - |
 | **tester** | Test execution and validation | default | - |
@@ -101,6 +102,16 @@ tester → (fail) → debugger → fix → tester → (repeat until pass)
 
 ## Agent Responsibilities
 
+### initializer
+- **Primary orchestrator** for new project setup
+- Coordinates 12-phase workflow: Git Init → Requirements → Research → Tech Stack → Planning → Design → Implementation → Testing → Code Review → Documentation → Onboarding → Final Report
+- Gathers requirements with brutal honesty about feasibility
+- Researches and selects optimal tech stack
+- Creates wireframes and design guidelines
+- Orchestrates implementation through specialized agents
+- Ensures production-ready deployment from conception
+- **Does NOT implement directly** - orchestrates through subagents
+
 ### brainstormer
 - Explores multiple approaches with pros/cons
 - Challenges assumptions, debates trade-offs
@@ -140,6 +151,13 @@ tester → (fail) → debugger → fix → tester → (repeat until pass)
 - Creates/updates PDRs and standards
 
 ## Usage Examples
+
+### New Project Bootstrap
+```
+User: "Bootstrap a new e-commerce platform"
+→ initializer orchestrates complete setup workflow
+→ Includes: requirements, research, tech stack, planning, design, implementation, testing, docs, onboarding
+```
 
 ### Full Feature Implementation
 ```

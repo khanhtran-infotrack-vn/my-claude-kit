@@ -1,7 +1,33 @@
 ---
-description: 'Use this agent when you need to validate code quality through testing, including running unit and integration tests, analyzing test coverage, validating error handling, checking performance requirements, or verifying build processes. This agent should be called after implementing new features or making significant code changes to ensure everything works as expected. Examples:\n\n<example>\nContext: The user has just finished implementing a new API endpoint and wants to ensure it works correctly.\nuser: "I''ve implemented the new user authentication endpoint"\nassistant: "Great! Now let me use the tester agent to run the test suite and validate the implementation"\n<commentary>\nSince new code has been written, use the Task tool to launch the tester agent to run tests and ensure everything works properly.\n</commentary>\n</example>\n\n<example>\nContext: The user wants to check test coverage after adding new features.\nuser: "Can you check if our test coverage is still above 80%?"\nassistant: "I''ll use the tester agent to analyze the current test coverage and provide a detailed report"\n<commentary>\nThe user is asking about test coverage metrics, so use the tester agent to run coverage analysis.\n</commentary>\n</example>\n\n<example>\nContext: After fixing a bug, ensuring the fix doesn''t break existing functionality.\nuser: "I''ve fixed the database connection issue in the auth module"\nassistant: "Let me use the tester agent to run the test suite and ensure the fix doesn''t introduce any regressions"\n<commentary>\nAfter bug fixes, use the tester agent to validate that existing tests still pass.\n</commentary>\n</example>'
+description: "Auto-trigger when user says: 'test', 'run tests', 'check tests', 'test coverage', 'run the test suite', 'verify', 'validate', 'make sure it works', 'does it work', 'check if [code] works', or after: 'I've implemented', 'I've fixed', 'I completed', 'finished coding', mentions: unit tests, integration tests, e2e tests, coverage, test failures, build, TFD verification.
+
+Use for: running tests (unit/integration/e2e), analyzing coverage, validating error handling, checking performance, verifying builds, Test-First Development compliance, ensuring implementations work correctly.
+
+Examples:
+<example>
+user: \"Run the tests for the authentication endpoint\"
+assistant: \"Running test suite for authentication endpoint - unit tests, integration tests, coverage analysis, TFD verification, and performance validation.\"
+<commentary>Trigger: 'run the tests' = explicit test execution request</commentary>
+</example>
+
+<example>
+user: \"Check if our test coverage is above 80%\"
+assistant: \"Analyzing test coverage across codebase - generating coverage reports, identifying uncovered paths, checking handlers/validators/domain logic coverage.\"
+<commentary>Trigger: 'check' + 'test coverage' = coverage analysis request</commentary>
+</example>
+
+<example>
+user: \"I've fixed the database connection bug\"
+assistant: \"Validating fix with full test suite - ensuring no regressions, checking related tests, verifying error scenarios, and confirming build passes.\"
+<commentary>Trigger: 'I've fixed' = post-fix validation to prevent regressions</commentary>
+</example>
+
+<example>
+user: \"Make sure the payment integration works correctly\"
+assistant: \"Running comprehensive tests for payment integration - API calls, error handling, edge cases, transaction flows, and security validation.\"
+<commentary>Trigger: 'make sure [X] works' = validation request via testing</commentary>
+</example>"
 mode: subagent
-model: anthropic/claude-sonnet-4.5
 tools:
   bash: true
   edit: true

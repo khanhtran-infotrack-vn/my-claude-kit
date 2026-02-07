@@ -1,5 +1,32 @@
 ---
-description: 'Use this agent when the user needs UI/UX design work including interface designs, wireframes, design systems, user research, responsive layouts, animations, or design documentation. Examples:\n\n<example>\nContext: User wants to create a new landing page design\nuser: "I need a modern landing page design for our SaaS product with a hero section, features, and pricing"\nassistant: "I''ll use the Task tool to launch the ui-ux-designer agent to create a comprehensive landing page design with wireframes and implementation."\n<commentary>The user is requesting UI/UX design work, so delegate to the ui-ux-designer agent to handle the complete design process including research, wireframing, and implementation.</commentary>\n</example>\n\n<example>\nContext: User has implemented a new feature and wants design review\nuser: "I''ve added a new dashboard widget, can you review the design?"\nassistant: "Let me first capture the current UI and then use the ui-ux-designer agent to analyze and provide design recommendations."\n<commentary>Use screenshot tool to capture current state, then delegate to ui-ux-designer for expert design analysis and suggestions.</commentary>\n</example>\n\n<example>\nContext: User mentions design inconsistencies\nuser: "The buttons across different pages look inconsistent"\nassistant: "I''ll use the ui-ux-designer agent to audit the design system and create consistent button components."\n<commentary>Design system work requires the ui-ux-designer agent to analyze, document, and implement consistent design patterns.</commentary>\n</example>\n\n<example>\nContext: Proactive design optimization opportunity\nuser: "Here''s the new signup form I just built"\nassistant: "Great! Let me use the ui-ux-designer agent to review the form design for accessibility, user experience, and mobile responsiveness."\n<commentary>Even without explicit request, proactively use ui-ux-designer to ensure design quality and best practices.</commentary>\n</example>'
+description: "Auto-trigger when user says: 'design', 'redesign', 'UI', 'UX', 'interface', 'wireframe', 'mockup', 'layout', 'looks', 'appearance', 'style', 'I need a [page/component] design', 'make it look', 'create a [UI element]', or mentions: landing page, dashboard, form design, buttons, navigation, color scheme, typography, responsive, mobile-first, accessibility, design system, brand identity, user experience.
+
+Use for: UI/UX design, wireframes, mockups, design systems, user research, responsive layouts, micro-animations, Three.js/WebGL experiences, trending design research (Dribbble/Behance/Awwwards), brand identity, design documentation.
+
+Examples:
+<example>
+user: \"I need a modern landing page design for our SaaS product\"
+assistant: \"Designing modern SaaS landing page - researching trending designs, creating wireframes, designing hero/features/pricing sections, ensuring mobile-first responsive layout, and implementing with production-ready code.\"
+<commentary>Trigger: 'I need [X] design' = UI/UX design work</commentary>
+</example>
+
+<example>
+user: \"Can you review the design of my dashboard?\"
+assistant: \"Reviewing dashboard design - analyzing layout, checking accessibility (WCAG 2.1 AA), evaluating UX flow, assessing visual hierarchy, testing mobile responsiveness, and providing improvement recommendations.\"
+<commentary>Trigger: 'review the design' = design quality assessment</commentary>
+</example>
+
+<example>
+user: \"The buttons look inconsistent across pages\"
+assistant: \"Auditing design system for button consistency - analyzing current button styles, creating standardized component library, documenting design tokens, and ensuring cross-page consistency.\"
+<commentary>Trigger: 'look inconsistent' + UI elements = design system work</commentary>
+</example>
+
+<example>
+user: \"Make the signup form look more professional\"
+assistant: \"Redesigning signup form - improving visual aesthetics, enhancing UX flow, optimizing field layout, adding micro-interactions, ensuring accessibility, and creating mobile-first responsive design.\"
+<commentary>Trigger: 'make [X] look' = visual design improvement</commentary>
+</example>"
 mode: subagent
 tools:
   bash: true

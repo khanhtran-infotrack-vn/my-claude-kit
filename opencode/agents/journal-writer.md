@@ -1,8 +1,29 @@
 ---
-description: 'Use this agent when:\n- A test suite fails repeatedly despite multiple fix attempts\n- A critical bug is discovered in production or staging\n- An implementation approach proves fundamentally flawed and requires complete redesign\n- External dependencies (APIs, services, libraries) cause blocking issues\n- Performance bottlenecks are discovered that significantly impact user experience\n- Security vulnerabilities are identified\n- Database migrations fail or cause data integrity issues\n- CI/CD pipelines break unexpectedly\n- Integration conflicts arise between major system components\n- Technical debt reaches a critical threshold requiring immediate attention\n- A feature implementation takes significantly longer than estimated\n- Architectural decisions prove problematic in practice\n\nExamples:\n<example>\nContext: After implementing a new payment webhook handler, tests are failing with intermittent database connection errors.\nuser: "The Sepay webhook tests keep failing with connection timeouts. I''ve tried increasing the pool size and timeout values but it''s still happening randomly."\nassistant: "This sounds like a significant technical difficulty that should be documented. Let me use the journal-writer agent to capture this issue with full context and emotional honesty."\n<uses Task tool to launch journal-writer agent>\n</example>\n\n<example>\nContext: A critical security vulnerability was discovered in the GitHub access management system.\nuser: "We just realized that the GitHub invitation system doesn''t properly validate user permissions before granting repository access. This could allow unauthorized users to access private repos."\nassistant: "This is a critical security issue that needs immediate documentation. I''m going to use the journal-writer agent to record this vulnerability, the emotional impact, and the urgency of the situation."\n<uses Task tool to launch journal-writer agent>\n</example>\n\n<example>\nContext: A major refactoring
-  effort failed and needs to be rolled back.\nuser: "The database schema migration we planned completely broke the order processing system. We need to roll back and rethink our approach."\nassistant: "This is a significant setback that should be documented honestly. Let me use the journal-writer agent to capture what went wrong, why it failed, and the emotional toll of this failure."\n<uses Task tool to launch journal-writer agent>\n</example>'
+description: "Auto-trigger when encountering: repeated test failures despite fixes, critical production bugs, flawed implementation requiring redesign, blocking external dependency issues, significant performance bottlenecks, security vulnerabilities, failed database migrations, broken CI/CD pipelines, major integration conflicts, critical technical debt, features taking much longer than estimated, problematic architectural decisions.
+
+Keywords: 'keeps failing', 'still broken', 'tried everything', 'critical bug', 'security vulnerability', 'completely broke', 'major setback', 'we need to roll back', 'this is frustrating', 'taking way longer than expected'.
+
+Use for: brutally honest technical journaling of significant failures, setbacks, and difficulties. Document emotional reality, root causes, lessons learned. Creates journal entries in `./docs/journals/YYMMDDHHmm-title.md`.
+
+Examples:
+<example>
+user: \"The webhook tests keep failing despite trying everything\"
+assistant: \"Documenting this persistent test failure - capturing technical details, emotional frustration, attempted solutions, root cause analysis, and lessons learned in honest technical journal entry.\"
+<commentary>Trigger: 'keeps failing' + 'despite' = significant difficulty needing documentation</commentary>
+</example>
+
+<example>
+user: \"We discovered a critical security vulnerability in user permissions\"
+assistant: \"Creating urgent journal entry for security vulnerability - documenting issue details, potential impact, emotional weight, immediate actions needed, and systemic lessons.\"
+<commentary>Trigger: 'critical' + 'security vulnerability' = high-severity issue documentation</commentary>
+</example>
+
+<example>
+user: \"The migration completely broke our system, need to roll back\"
+assistant: \"Documenting major setback - capturing what went wrong, why migration failed, rollback process, emotional toll, lessons learned, and preventing similar failures.\"
+<commentary>Trigger: 'completely broke' + 'roll back' = major failure needing honest documentation</commentary>
+</example>"
 mode: subagent
-model: anthropic/claude-sonnet-4.5
 tools:
   bash: true
   edit: true

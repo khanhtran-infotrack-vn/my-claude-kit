@@ -1,7 +1,33 @@
 ---
-description: 'Use this agent when you need to investigate issues, analyze system behavior, diagnose performance problems, examine database structures, collect and analyze logs from servers or CI/CD pipelines, run tests for debugging purposes, or optimize system performance. This includes troubleshooting errors, identifying bottlenecks, analyzing failed deployments, investigating test failures, and creating diagnostic reports. Examples:\n\n<example>\nContext: The user needs to investigate why an API endpoint is returning 500 errors.\nuser: "The /api/users endpoint is throwing 500 errors"\nassistant: "I''ll use the debugger agent to investigate this issue"\n<commentary>\nSince this involves investigating an issue, use the Task tool to launch the debugger agent.\n</commentary>\n</example>\n\n<example>\nContext: The user wants to analyze why the CI/CD pipeline is failing.\nuser: "The GitHub Actions workflow keeps failing on the test step"\nassistant: "Let me use the debugger agent to analyze the CI/CD pipeline logs and identify the issue"\n<commentary>\nThis requires analyzing CI/CD logs and test failures, so use the debugger agent.\n</commentary>\n</example>\n\n<example>\nContext: The user notices performance degradation in the application.\nuser: "The application response times have increased by 300% since yesterday"\nassistant: "I''ll launch the debugger agent to analyze system behavior and identify performance bottlenecks"\n<commentary>\nPerformance analysis and bottleneck identification requires the debugger agent.\n</commentary>\n</example>'
+description: "Auto-trigger when user reports: 'error', 'bug', 'issue', 'problem', 'not working', 'broken', 'failing', 'throws', 'crash', 'slow', 'performance', 'why is', 'what's wrong', 'investigate', 'debug', 'troubleshoot', 'analyze logs', mentions: 500 error, exception, stack trace, CI/CD failure, test failure, timeout, bottleneck, memory leak, high CPU.
+
+Use for: investigating issues, analyzing system behavior, diagnosing performance problems, examining databases, collecting logs (server/CI/CD), debugging test failures, troubleshooting errors, identifying bottlenecks, creating diagnostic reports.
+
+Examples:
+<example>
+user: \"The /api/users endpoint is throwing 500 errors\"
+assistant: \"Investigating 500 errors on /api/users endpoint - analyzing logs, examining stack traces, checking database queries, reviewing error handling, and identifying root cause.\"
+<commentary>Trigger: 'throwing [X] errors' = issue investigation needed</commentary>
+</example>
+
+<example>
+user: \"The GitHub Actions workflow keeps failing\"
+assistant: \"Analyzing CI/CD pipeline failures - collecting GitHub Actions logs, identifying failed steps, examining test outputs, checking dependencies, and diagnosing root cause.\"
+<commentary>Trigger: 'keeps failing' + CI/CD context = pipeline debugging</commentary>
+</example>
+
+<example>
+user: \"Why is the application so slow today?\"
+assistant: \"Diagnosing performance degradation - analyzing response times, profiling bottlenecks, examining database queries, checking resource usage, and identifying optimization opportunities.\"
+<commentary>Trigger: 'why is' + 'slow' = performance investigation</commentary>
+</example>
+
+<example>
+user: \"The tests are failing intermittently\"
+assistant: \"Troubleshooting intermittent test failures - analyzing test logs, checking for race conditions, examining mock configurations, reviewing test isolation, and identifying flaky tests.\"
+<commentary>Trigger: 'tests are failing' = test debugging needed</commentary>
+</example>"
 mode: subagent
-model: anthropic/claude-sonnet-4.5
 tools:
   bash: true
   edit: true

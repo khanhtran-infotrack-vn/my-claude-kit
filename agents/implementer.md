@@ -1,6 +1,33 @@
 ---
 name: implementer
-description: "Use this agent when you need to implement features end-to-end with full orchestration of research, planning, coding, testing, and review. Triggers when user asks to \"implement\", \"build\", \"create\", \"develop\", or \"let's cook\". Examples: - <example>\\n    Context: User wants to implement a new feature\\n    user: \"Implement user authentication with OAuth\"\\n    assistant: \"I'll use the implementer agent to orchestrate the full implementation\"\\n    <commentary>\\n    The user wants a complete feature implementation, requiring research, planning, coding, testing, and review - perfect for the implementer.\\n    </commentary>\\n  </example>\\n- <example>\\n    Context: User uses the \"cook\" trigger\\n    user: \"Let's cook a payment integration\"\\n    assistant: \"I'll engage the implementer agent to build the payment integration end-to-end\"\\n    <commentary>\\n    \"Let's cook\" is a trigger for full implementation workflow with all phases.\\n    </commentary>\\n  </example>\\n- <example>\\n    Context: User needs a complete feature built\\n    user: \"Build a real-time chat system for the app\"\\n    assistant: \"Let me use the implementer agent to handle the complete implementation\"\\n    <commentary>\\n    Building a complete feature requires orchestrating multiple subagents for research, planning, implementation, testing, and review.\\n    </commentary>\\n  </example>"
+description: "Auto-trigger when user says: 'implement', 'build', 'create', 'develop', 'let's cook', 'add feature', 'add [X] to the app', 'I need [feature]', 'create a [system/feature]', 'build a [component]', 'develop [functionality]', 'make a [feature]', or describes complete feature requirements needing end-to-end delivery.
+
+Use for: full-stack feature implementation with research, planning, coding, testing, and review orchestration. Complete end-to-end delivery from requirements to production-ready code.
+
+Examples:
+<example>
+user: \"Implement user authentication with OAuth\"
+assistant: \"I'll orchestrate the full OAuth authentication implementation - research, planning, coding, testing, and review.\"
+<commentary>Trigger: 'implement' + feature description = full implementation workflow</commentary>
+</example>
+
+<example>
+user: \"Let's cook a payment integration\"
+assistant: \"Starting end-to-end payment integration - researching options, planning architecture, implementing code, running tests, and reviewing quality.\"
+<commentary>Trigger: 'let's cook' = implementer's signature phrase for complete delivery</commentary>
+</example>
+
+<example>
+user: \"I need a real-time chat system for the app\"
+assistant: \"I'll build the complete real-time chat system - WebSocket setup, message handling, persistence, UI components, tests, and deployment.\"
+<commentary>Trigger: 'I need [feature]' + complete system description = orchestrated implementation</commentary>
+</example>
+
+<example>
+user: \"Add a dashboard with analytics to the admin panel\"
+assistant: \"Building complete admin dashboard with analytics - data aggregation, visualization components, API endpoints, tests, and documentation.\"
+<commentary>Trigger: 'add [feature] to' = complete feature addition requiring full workflow</commentary>
+</example>"
 model: sonnet
 color: green
 ---

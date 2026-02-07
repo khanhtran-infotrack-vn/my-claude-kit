@@ -1,6 +1,33 @@
 ---
 name: researcher
-description: "Use this agent when you need to conduct comprehensive research on software development topics, including investigating new technologies, finding documentation, exploring best practices, or gathering information about plugins, packages, and open source projects. This agent excels at synthesizing information from multiple sources including searches, website content, YouTube videos, and technical documentation to produce detailed research reports. <example>Context: The user needs to research a new technology stack for their project. user: "I need to understand the latest developments in React Server Components and best practices for implementation" assistant: "I'll use the researcher agent to conduct comprehensive research on React Server Components, including latest updates, best practices, and implementation guides." <commentary>Since the user needs in-depth research on a technical topic, use the Task tool to launch the researcher agent to gather information from multiple sources and create a detailed report.</commentary></example> <example>Context: The user wants to find the best authentication libraries for their Flutter app. user: "Research the top authentication solutions for Flutter apps with biometric support" assistant: "Let me deploy the researcher agent to investigate authentication libraries for Flutter with biometric capabilities." <commentary>The user needs research on specific technical requirements, so use the researcher agent to search for relevant packages, documentation, and implementation examples.</commentary></example> <example>Context: The user needs to understand security best practices for API development. user: "What are the current best practices for securing REST APIs in 2024?" assistant: "I'll engage the researcher agent to research current API security best practices and compile a comprehensive report." <commentary>This requires thorough research on security practices, so use the researcher agent to gather information from authoritative sources and create a detailed summary.</commentary></example>"
+description: "Auto-trigger when user says: 'research', 'find information about', 'what is', 'what are', 'tell me about', 'learn about', 'investigate', 'explore', 'look up', 'find the best [library/framework/tool]', 'what are the options for', 'compare [technologies]', or mentions: new technology, documentation, best practices, plugins, packages, libraries, frameworks, tools, latest updates, industry standards.
+
+Use for: comprehensive research on software development topics, investigating new technologies, finding documentation, exploring best practices, gathering information about plugins/packages/OSS projects, synthesizing from multiple sources (web, docs, videos).
+
+Examples:
+<example>
+user: \"What are the latest developments in React Server Components?\"
+assistant: \"Researching React Server Components - gathering latest updates, best practices, implementation guides, performance characteristics, and real-world usage patterns from official docs and community resources.\"
+<commentary>Trigger: 'what are the latest' + technology = research request</commentary>
+</example>
+
+<example>
+user: \"Find the best authentication library for Flutter with biometric support\"
+assistant: \"Researching Flutter authentication libraries - comparing options with biometric support, analyzing features/limitations, checking community adoption, reviewing documentation quality, and providing recommendations.\"
+<commentary>Trigger: 'find the best' + technical requirement = comprehensive research</commentary>
+</example>
+
+<example>
+user: \"What are current best practices for securing REST APIs?\"
+assistant: \"Researching REST API security best practices - analyzing OWASP guidelines, surveying industry standards, examining authentication patterns, reviewing authorization strategies, and compiling comprehensive report.\"
+<commentary>Trigger: 'what are' + 'best practices' = standards research</commentary>
+</example>
+
+<example>
+user: \"Research payment gateway options for my SaaS\"
+assistant: \"Investigating payment gateway solutions - comparing Stripe/PayPal/Braintree features, analyzing pricing models, reviewing integration complexity, checking regional support, and documenting trade-offs.\"
+<commentary>Trigger: 'research' + decision-making need = comparative research</commentary>
+</example>"
 model: haiku
 color: green
 ---

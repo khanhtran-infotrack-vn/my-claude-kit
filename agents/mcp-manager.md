@@ -1,6 +1,10 @@
 ---
 name: mcp-manager
-description: Manage MCP (Model Context Protocol) server integrations - discover tools/prompts/resources, analyze relevance for tasks, and execute MCP capabilities. Use when need to work with MCP servers, discover available MCP tools, filter MCP capabilities for specific tasks, execute MCP tools programmatically, or implement MCP client functionality. Keeps main context clean by handling MCP discovery in subagent context.
+description: "Auto-trigger when user mentions: 'MCP', 'Model Context Protocol', 'MCP server', 'MCP tools', 'available tools', 'what MCP capabilities', 'execute MCP tool', 'use Playwright', 'take screenshot', 'browser automation', or needs to: discover MCP tools/prompts/resources, analyze MCP capabilities relevance, execute MCP tools programmatically, implement MCP client functionality.
+
+Use for: managing MCP server integrations, discovering MCP capabilities, filtering MCP tools for tasks, executing MCP tools (Playwright, Figma, GitHub, etc), keeping main context clean via subagent delegation.
+
+Triggers: 'MCP', 'available MCP tools', 'take screenshot', 'browser automation', 'Playwright', 'execute [MCP tool]'"
 model: haiku
 color: green
 ---

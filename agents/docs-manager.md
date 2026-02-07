@@ -1,6 +1,33 @@
 ---
 name: docs-manager
-description: "Use this agent when you need to manage technical documentation, establish implementation standards, analyze and update existing documentation based on code changes, write or update Product Development Requirements (PDRs), organize documentation for developer productivity, or produce documentation summary reports. This includes tasks like reviewing documentation structure, ensuring docs are up-to-date with codebase changes, creating new documentation for features, and maintaining consistency across all technical documentation.\n\nExamples:\n- <example>\n  Context: After implementing a new API endpoint, documentation needs to be updated.\n  user: "I just added a new authentication endpoint to the API"\n  assistant: "I'll use the docs-manager agent to update the documentation for this new endpoint"\n  <commentary>\n  Since new code has been added, use the docs-manager agent to ensure documentation is updated accordingly.\n  </commentary>\n</example>\n- <example>\n  Context: Project documentation needs review and organization.\n  user: "Can you review our docs folder and make sure everything is properly organized?"\n  assistant: "I'll launch the docs-manager agent to analyze and organize the documentation"\n  <commentary>\n  The user is asking for documentation review and organization, which is the docs-manager agent's specialty.\n  </commentary>\n</example>\n- <example>\n  Context: Need to establish coding standards documentation.\n  user: "We need to document our error handling patterns and codebase structure standards"\n  assistant: "Let me use the docs-manager agent to establish and document these implementation standards"\n  <commentary>\n  Creating implementation standards documentation is a core responsibility of the docs-manager agent.\n  </commentary>\n</example>"
+description: "Auto-trigger when user says: 'document', 'update docs', 'write documentation', 'create docs', 'docs need', 'documentation for', 'add to docs', 'update README', 'API documentation', 'I just added [feature]' (proactive docs update), or mentions: documentation, technical docs, API docs, README, code standards, PDR (Product Development Requirements), implementation standards, codebase summary.
+
+Use for: managing technical documentation, establishing implementation standards, analyzing/updating docs after code changes, writing/updating PDRs, organizing documentation for developer productivity, ensuring docs-code sync, creating codebase summaries.
+
+Examples:
+<example>
+user: \"I just added a new authentication endpoint\"
+assistant: \"Updating documentation for new authentication endpoint - documenting API contract, request/response formats, error codes, authentication requirements, and adding to API docs.\"
+<commentary>Trigger: 'I just added' = proactive docs update after code change</commentary>
+</example>
+
+<example>
+user: \"Review our docs folder and organize everything\"
+assistant: \"Analyzing and organizing documentation - reviewing structure, checking completeness, updating outdated content, ensuring consistency, creating navigation, and producing summary report.\"
+<commentary>Trigger: 'review' + 'docs folder' = documentation review and organization</commentary>
+</example>
+
+<example>
+user: \"We need to document our error handling patterns\"
+assistant: \"Creating implementation standards documentation - documenting error handling patterns, establishing code standards, defining best practices, and ensuring developer productivity.\"
+<commentary>Trigger: 'we need to document' + standards = create standards documentation</commentary>
+</example>
+
+<example>
+user: \"Update the API documentation with the new changes\"
+assistant: \"Syncing API documentation with recent code changes - analyzing modifications, updating endpoint docs, refreshing examples, verifying accuracy, and ensuring docs-code alignment.\"
+<commentary>Trigger: 'update' + 'API documentation' = docs maintenance</commentary>
+</example>"
 model: sonnet
 color: green
 ---

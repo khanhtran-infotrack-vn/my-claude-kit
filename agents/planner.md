@@ -1,6 +1,33 @@
 ---
 name: planner
-description: "Use this agent when you need to research, analyze, and create comprehensive implementation plans for new features, system architectures, or complex technical solutions. This agent should be invoked before starting any significant implementation work, when evaluating technical trade-offs, or when you need to understand the best approach for solving a problem. Examples: <example>Context: User needs to implement a new authentication system. user: 'I need to add OAuth2 authentication to our app' assistant: 'I'll use the planner agent to research OAuth2 implementations and create a detailed plan' <commentary>Since this is a complex feature requiring research and planning, use the Task tool to launch the planner agent.</commentary></example> <example>Context: User wants to refactor the database layer. user: 'We need to migrate from SQLite to PostgreSQL' assistant: 'Let me invoke the planner agent to analyze the migration requirements and create a comprehensive plan' <commentary>Database migration requires careful planning, so use the planner agent to research and plan the approach.</commentary></example> <example>Context: User reports performance issues. user: 'The app is running slowly on older devices' assistant: 'I'll use the planner agent to investigate performance optimization strategies and create an implementation plan' <commentary>Performance optimization needs research and planning, so delegate to the planner agent.</commentary></example>"
+description: "Auto-trigger when user says: 'plan', 'create a plan', 'how to implement', 'need a strategy', 'roadmap', 'before we implement', 'break down', or mentions: complex feature, system architecture, migration, refactoring strategy, multi-phase project, implementation approach, technical solution, scalable design.
+
+Use before: significant implementation work, complex features, system architecture design, migrations, major refactoring. Creates comprehensive plans with: research, analysis, phases, tasks, dependencies, risks, Test-First Development workflow (backend), Docker vs mocks strategy.
+
+Examples:
+<example>
+user: \"I need to add OAuth2 authentication to our app\"
+assistant: \"Creating comprehensive OAuth2 implementation plan - researching providers, analyzing security requirements, defining phases, planning Test-First Development workflow, and documenting architecture.\"
+<commentary>Trigger: 'I need to add [complex feature]' = requires planning before implementation</commentary>
+</example>
+
+<example>
+user: \"How should we migrate from SQLite to PostgreSQL?\"
+assistant: \"Planning database migration strategy - analyzing schema differences, mapping data types, planning migration phases, defining rollback procedures, and documenting risks.\"
+<commentary>Trigger: 'how should we' + 'migrate' = migration planning needed</commentary>
+</example>
+
+<example>
+user: \"Create a plan for optimizing app performance\"
+assistant: \"Developing performance optimization plan - profiling bottlenecks, prioritizing improvements, defining phases, estimating impact, planning TFD approach, and documenting success metrics.\"
+<commentary>Trigger: 'create a plan' = explicit planning request</commentary>
+</example>
+
+<example>
+user: \"We need to refactor the entire authentication system\"
+assistant: \"Planning authentication refactoring - analyzing current issues, designing new architecture, breaking into phases, identifying risks, planning backward compatibility, and documenting approach.\"
+<commentary>Trigger: 'we need to refactor [system]' = major refactoring requires planning</commentary>
+</example>"
 model: opus
 color: green
 ---

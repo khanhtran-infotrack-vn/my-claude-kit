@@ -1,6 +1,33 @@
 ---
 name: database-admin
-description: "Use this agent when you need to work with database systems, including querying for data analysis, diagnosing performance bottlenecks, optimizing database structures, managing indexes, implementing backup and restore strategies, setting up replication, configuring monitoring, managing user permissions, or when you need comprehensive database health assessments and optimization recommendations. This agent should be engaged for any database-related tasks that require deep technical expertise in database administration and optimization.\n\nExamples:\n<example>\nContext: The user needs to analyze database performance issues after noticing slow query times.\nuser: "The application is running slowly, I think there might be database issues"\nassistant: "I'll use the database-admin agent to analyze the database performance and identify any bottlenecks."\n<commentary>\nSince the user is experiencing performance issues potentially related to the database, use the Task tool to launch the database-admin agent to diagnose and provide optimization recommendations.\n</commentary>\n</example>\n<example>\nContext: The user needs to set up a backup strategy for their production database.\nuser: "We need to implement a reliable backup strategy for our PostgreSQL database"\nassistant: "Let me engage the database-admin agent to design and implement a comprehensive backup and restore strategy."\n<commentary>\nThe user needs database backup expertise, so use the Task tool to launch the database-admin agent to handle this specialized database administration task.\n</commentary>\n</example>\n<example>\nContext: During code implementation, the developer needs to optimize database queries and table structures.\nuser: "I've implemented the new feature but the queries seem slow"\nassistant: "I'll delegate this to the database-admin agent to analyze the queries and optimize the database structure."\n<commentary>\nQuery optimization requires database expertise, so use the Task tool to launch the database-admin agent to analyze and optimize the database performance.\n</commentary>\n</example>"
+description: "Auto-trigger when user mentions: 'database', 'DB', 'SQL', 'query', 'PostgreSQL', 'MySQL', 'MongoDB', 'SQL Server', 'slow queries', 'database performance', 'optimize queries', 'backup strategy', 'indexes', 'migrations', 'schema', 'replication', 'connection pool', or says: 'query for', 'database is slow', 'optimize database', 'set up backup', 'migration failed'.
+
+Use for: database administration (PostgreSQL/MySQL/SQL Server/MongoDB), query optimization, performance diagnosis, schema design, index management, backup/restore strategies, replication setup, monitoring configuration, user permissions, health assessments, Docker vs in-memory test database strategy.
+
+Examples:
+<example>
+user: \"The database queries are running slowly\"
+assistant: \"Analyzing database performance - running EXPLAIN ANALYZE on slow queries, checking indexes, reviewing connection pools, examining table statistics, and providing optimization recommendations.\"
+<commentary>Trigger: 'database' + 'queries' + 'slowly' = performance diagnosis</commentary>
+</example>
+
+<example>
+user: \"Set up a backup strategy for our PostgreSQL database\"
+assistant: \"Designing comprehensive PostgreSQL backup strategy - planning automated backups, configuring retention policies, documenting restore procedures, testing recovery process, and setting up monitoring.\"
+<commentary>Trigger: 'set up backup' + 'PostgreSQL' = backup administration</commentary>
+</example>
+
+<example>
+user: \"My queries seem slow after adding the new feature\"
+assistant: \"Optimizing database queries - analyzing execution plans, identifying missing indexes, reviewing N+1 query issues, optimizing table structures, and measuring performance improvements.\"
+<commentary>Trigger: 'queries seem slow' = query optimization needed</commentary>
+</example>
+
+<example>
+user: \"Should we use Docker or in-memory databases for testing?\"
+assistant: \"Evaluating test database strategies - comparing Docker containers (production-like) vs in-memory/mocks (faster TFD), analyzing trade-offs, and recommending approach based on project needs.\"
+<commentary>Trigger: database + 'testing' + strategy question = test DB consultation</commentary>
+</example>"
 model: sonnet
 color: green
 ---

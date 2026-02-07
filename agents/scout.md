@@ -1,6 +1,27 @@
 ---
 name: scout
-description: "Use this agent when you need to quickly locate relevant files across a large codebase to complete a specific task. This agent is particularly useful when:\n\n<example>\nContext: User needs to implement a new payment provider integration and needs to find all payment-related files.\nuser: "I need to add Stripe as a new payment provider. Can you help me find all the relevant files?"\nassistant: "I'll use the scout agent to quickly search for payment-related files across the codebase."\n<Task tool call to scout with query about payment provider files>\n<commentary>\nThe user needs to locate payment integration files. The scout agent will efficiently search multiple directories in parallel using external agentic tools to find all relevant payment processing files, API routes, and configuration files.\n</commentary>\n</example>\n\n<example>\nContext: User is debugging an authentication issue and needs to find all auth-related components.\nuser: "There's a bug in the login flow. I need to review all authentication files."\nassistant: "Let me use the scout agent to locate all authentication-related files for you."\n<Task tool call to scout with query about authentication files>\n<commentary>\nThe user needs to debug authentication. The scout agent will search across app/, lib/, and api/ directories in parallel to quickly identify all files related to authentication, sessions, and user management.\n</commentary>\n</example>\n\n<example>\nContext: User wants to understand how database migrations work in the project.\nuser: "How are database migrations structured in this project?"\nassistant: "I'll use the scout agent to find all migration-related files and database schema definitions."\n<Task tool call to scout with query about database migrations>\n<commentary>\nThe user needs to understand database structure. The scout agent will efficiently search db/, lib/, and schema directories to locate migration files, schema definitions, and database configuration files.\n</commentary>\n</example>\n\nProactively use this agent when:\n- Beginning work on a feature that spans multiple directories\n- User mentions needing to "find", "locate", or "search for" files\n- Starting a debugging session that requires understanding file relationships\n- User asks about project structure or where specific functionality lives\n- Before making changes that might affect multiple parts of the codebase"
+description: "Auto-trigger when user says: 'find files', 'locate', 'search for', 'where is', 'show me files', 'find all [X] files', 'help me find', or mentions needing to: locate relevant files across large codebase, find feature-related files spanning multiple directories, understand project structure, identify file relationships.
+
+Use for: rapid file location across large codebases, parallel directory searching, finding payment/auth/migration/API files, understanding codebase structure. Proactively trigger before: implementing features spanning multiple dirs, debugging requiring file understanding, making changes affecting multiple codebase parts.
+
+Examples:
+<example>
+user: \"Find all payment-related files for Stripe integration\"
+assistant: \"Scouting payment files - parallel searching app/lib/api directories for payment processing, Stripe integration, API routes, and config files.\"
+<commentary>Trigger: 'find all [X] files' = file location request</commentary>
+</example>
+
+<example>
+user: \"Where are the authentication files in this project?\"
+assistant: \"Locating authentication files - searching app/lib/api/components for auth logic, sessions, user management, and login flows.\"
+<commentary>Trigger: 'where are' + file type = codebase navigation</commentary>
+</example>
+
+<example>
+user: \"Show me how database migrations are structured\"
+assistant: \"Finding migration files - scanning db/lib/schema dirs for migration scripts, schema definitions, and database config.\"
+<commentary>Trigger: 'show me' + codebase structure question = exploration request</commentary>
+</example>"
 tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, Bash, BashOutput, KillShell, ListMcpResourcesTool, ReadMcpResourceTool
 model: haiku
 color: green

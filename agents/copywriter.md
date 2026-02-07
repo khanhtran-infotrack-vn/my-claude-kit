@@ -1,6 +1,33 @@
 ---
 name: copywriter
-description: "Use this agent when you need to create high-converting, engagement-driven copy for marketing materials, social media posts, landing pages, email campaigns, product descriptions, or any content that needs to capture attention and drive action. Examples:\n\n<example>\nContext: User is launching a new product feature and needs compelling copy for the landing page hero section.\nuser: "We just added a new AI-powered code review feature. Can you write a hero headline and sub headline for the landing page?"\nassistant: "I'm going to use the Task tool to launch the copywriter agent to create compelling hero copy that stops visitors and drives conversions."\n<commentary>\nThe user needs marketing copy that converts, so delegate to copywriter agent to craft attention-grabbing headlines.\n</commentary>\n</example>\n\n<example>\nContext: User wants to announce a product update on Twitter/X to maximize engagement.\nuser: "We just shipped GitHub auto-invites for ClaudeKit. Need a tweet that'll get people excited."\nassistant: "Let me use the copywriter agent to craft a viral-worthy tweet that captures attention and drives engagement."\n<commentary>\nSocial media announcement requires viral copywriting expertise, so use the copywriter agent.\n</commentary>\n</example>\n\n<example>\nContext: User is reviewing marketing materials and the agent proactively identifies weak copy.\nuser: "Here's our new pricing page draft"\nassistant: "I notice the headline 'Our Pricing Plans' could be more compelling. Let me use the copywriter agent to suggest alternatives that drive conversions."\n<commentary>\nProactively identify opportunities to improve copy and suggest using copywriter agent.\n</commentary>\n</example>\n\n<example>\nContext: User needs email subject lines that increase open rates.\nuser: "Write subject lines for our product launch email campaign"\nassistant: "I'm delegating to the copywriter agent to create high-open-rate subject lines that cut through inbox noise."\n<commentary>\nEmail marketing requires conversion-focused copy, so use copywriter agent.\n</commentary>\n</example>"
+description: "Auto-trigger when user says: 'write copy', 'write a [headline/tagline/slogan]', 'create copy for', 'need copy', 'marketing copy', 'write a tweet', 'write an email', 'product description', 'landing page copy', 'improve this copy', or mentions: headline, tagline, hero section, call-to-action, CTA, social media post, email subject line, product launch, announcement, conversion copy, engagement.
+
+Use for: high-converting marketing copy, social media posts (Twitter/LinkedIn/etc), landing pages, email campaigns, product descriptions, headlines, CTAs, content that captures attention and drives action.
+
+Examples:
+<example>
+user: \"Write a hero headline for our AI-powered code review feature\"
+assistant: \"Crafting compelling hero headline and subheadline - focusing on transformation, benefits over features, creating curiosity gaps, and optimizing for conversion with A/B test variations.\"
+<commentary>Trigger: 'write' + 'headline' = copywriting request</commentary>
+</example>
+
+<example>
+user: \"Need a tweet for our GitHub auto-invites launch\"
+assistant: \"Creating viral-worthy tweet - crafting attention-grabbing hook, emphasizing value proposition, optimizing for engagement, keeping under character limit, avoiding hashtag spam.\"
+<commentary>Trigger: 'need a tweet' = social media copywriting</commentary>
+</example>
+
+<example>
+user: \"Improve the copy on our pricing page\"
+assistant: \"Enhancing pricing page copy - transforming generic headlines into benefit-driven messages, adding social proof, creating urgency, optimizing CTAs for conversion.\"
+<commentary>Trigger: 'improve' + 'copy' = copy optimization</commentary>
+</example>
+
+<example>
+user: \"Write email subject lines for product launch campaign\"
+assistant: \"Generating high-open-rate email subject lines - testing curiosity vs urgency hooks, keeping under 60 chars, avoiding spam triggers, providing 3-5 A/B test variations.\"
+<commentary>Trigger: 'write email subject lines' = email marketing copy</commentary>
+</example>"
 model: sonnet
 color: green
 ---

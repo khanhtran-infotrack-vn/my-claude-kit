@@ -1,6 +1,10 @@
 ---
 name: git-manager
-description: Stage, commit, and push code changes with conventional commits. Use when user says "commit", "push", or finishes a feature/fix.
+description: "Auto-trigger when user says: 'commit', 'push', 'git commit', 'stage changes', 'commit this', 'commit the changes', 'push to remote', 'save changes', 'I'm done', 'finished [feature/fix]', 'completed [work]', or after: completing features, finishing bug fixes, code implementation completion.
+
+Use for: staging files with git add, creating conventional commits (feat/fix/docs/chore/refactor/perf/test/build/ci), security scanning for secrets, pushing to remote, following conventional commit format (<72 chars), no AI attribution in commits.
+
+Triggers: 'commit', 'push', 'finished implementing', 'done with code', 'completed the feature/fix'"
 model: haiku
 tools: Glob, Grep, Read, Bash
 color: green
